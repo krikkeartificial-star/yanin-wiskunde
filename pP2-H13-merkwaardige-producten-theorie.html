@@ -25,10 +25,18 @@ button{cursor:pointer;border:0;border-radius:12px;font-size:.95rem;font-weight:6
 .progress .fill{height:100%;width:0%;background:var(--accent);transition:width .2s}.progress .lbl{font-size:.78rem;color:var(--muted);margin-top:4px}
 h3.sub{margin:26px 0 8px;font-size:1.05rem;color:var(--accent)}
 .formula{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:9px;padding:10px 14px;margin:12px 0;font-size:.98rem}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.figbox{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px}
+.figcap{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+.ex{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:12px 0}
+.ex .extitle{font-weight:800;color:var(--accent);font-size:1rem;margin:0 0 6px}
+.ex .steps{margin:6px 0 8px;padding-left:18px}
+.ex .steps li{margin:3px 0}
+.ex .uit{background:var(--good-soft);border-radius:8px;padding:7px 10px;font-weight:700;color:var(--good)}
 .block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
 .lees{background:#f2fdf5;border-left:4px solid var(--good);border-radius:9px;padding:10px 14px;margin:10px 0;font-size:.92rem}
 .lees code{background:#e3f6ea;border-color:#c2e6d2;color:#14603a}
-.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
+.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 14px;font-size:.84rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem}
 th,td{border:1px solid var(--border);padding:8px 11px;text-align:left}th{background:var(--bg)}
 code{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1px 5px;font-family:ui-monospace,Menlo,monospace}
@@ -66,7 +74,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <h1>Theorie — H13 — Merkwaardige producten</h1>
   <p>Gebaseerd op Pienter 2 · Leerjaar 2, aangevuld met externe uitleg en de vakfiche-notatie.</p>
 </header>
-<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 13 — Merkwaardige producten · <b>p. 467–492</b></div>
+<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 13 — Merkwaardige producten · <b>p. 467–492</b><br><a class="pdfopen" href="pienter-2.pdf#page=469" title="Open het hoofdstuk in Pienter">📄 Open dit hoofdstuk in de PDF (p. 467–492)</a></div>
 <div class="block"><h3>Wat zijn merkwaardige producten?</h3>
 <p>Een <strong>tweeterm</strong> is een veelterm met twee termen, zoals a&nbsp;+&nbsp;b of a&nbsp;&minus;&nbsp;b. Sommige producten van tweetermen hebben een vast, bijzonder resultaat. Die noem je <strong>merkwaardige producten</strong>.</p>
 
@@ -89,6 +97,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
 </ul>
 <div class="formula">Let goed op de tekens: (a + b)<sup>2</sup> is niet gelijk aan a<sup>2</sup> + b<sup>2</sup>. Het dubbel product 2ab mag je niet vergeten.</div>
 </div>
+<h3 class="sub">✍️ Voorbeelden (uitgewerkt)</h3><div class="ex"><p class="extitle">(x + 7)² uitwerken</p><ol class="steps"><li>Gebruik de formule (a + b)² = a² + 2ab + b².</li><li>Eerste term: x²; tweede term: 7² = 49.</li><li>Dubbel product: 2 · x · 7 = 14x.</li><li>Alles samen: x² + 14x + 49.</li></ol><div class="uit">(x + 7)² = x² + 14x + 49.</div></div><div class="ex"><p class="extitle">(3x − 2)² uitwerken</p><ol class="steps"><li>Gebruik de formule (a − b)² = a² − 2ab + b².</li><li>(3x)² = 9x² en 2² = 4.</li><li>Het dubbel product is 2 · 3x · 2 = 12x, met het minteken: −12x.</li><li>Alles samen: 9x² − 12x + 4.</li></ol><div class="uit">(3x − 2)² = 9x² − 12x + 4.</div></div><div class="ex"><p class="extitle">Handig rekenen: 201 · 199</p><ol class="steps"><li>Schrijf 201 als (200 + 1) en 199 als (200 − 1).</li><li>Gebruik (a + b)(a − b) = a² − b².</li><li>200² − 1² = 40000 − 1.</li><li>40000 − 1 = 39999.</li></ol><div class="uit">201 · 199 = 39999.</div></div><h3 class="sub">📊 Zelfstandig getekend</h3><div class="figgrid"><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="(a+b)² oppervlaktemodel" style="max-width:100%;height:auto;display:block"><rect x="40" y="40" width="240" height="150" fill="#fff" stroke="#1b2440" stroke-width="2"/><line x1="120" y1="40" x2="120" y2="190" stroke="#1b2440" stroke-width="1.6"/><line x1="40" y1="110" x2="280" y2="110" stroke="#1b2440" stroke-width="1.6"/><rect x="40" y="40" width="80" height="70" fill="#2f5bff" opacity="0.45"/><rect x="120" y="40" width="160" height="70" fill="#f59e0b" opacity="0.45"/><rect x="40" y="110" width="80" height="80" fill="#1a9d5c" opacity="0.45"/><rect x="120" y="110" width="160" height="80" fill="#5b3df0" opacity="0.35"/><text x="80" y="82" font-size="12" text-anchor="middle" fill="#1b2440">a²</text><text x="200" y="82" font-size="12" text-anchor="middle" fill="#1b2440">ab</text><text x="80" y="158" font-size="12" text-anchor="middle" fill="#1b2440">ab</text><text x="200" y="158" font-size="12" text-anchor="middle" fill="#1b2440">b²</text><text x="160" y="212" font-size="12" text-anchor="middle" fill="#1b2440" font-weight="700">(a+b)² = a² + 2ab + b²</text></svg><div class="figcap">(a+b)² oppervlaktemodel</div></div></div>
 <div class="block" style="background:var(--accent-soft)">
 <h3 style="margin:0;color:var(--accent)">📚 Verder verkennen (research per onderwerp)</h3>
 <ul class="res" style="margin:10px 0 0"><li>Math4All — Merkwaardige producten — de formules (a+b)<sup>2</sup>, (a&minus;b)<sup>2</sup> en (a+b)(a&minus;b) verduidelijkt (http://www.math4all.nl/venster/bekijk/merkwaardige-producten/50/1)</li><li>ABC Bijles — Merkwaardige producten — uitleg van de drie basisformules met voorbeelden (https://abcbijles.nl/bijles/dordrecht/wiskunde/merkwaardige-producten)</li><li>Katholiek Onderwijs Vlaanderen — Het kwadraat van een tweeterm (1e graad A-stroom) (https://pro.katholiekonderwijs.vlaanderen/voorbeeld-het-kwadraat-van-een-tweeterm)</li></ul>
