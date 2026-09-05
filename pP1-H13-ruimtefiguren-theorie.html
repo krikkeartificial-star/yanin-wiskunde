@@ -25,10 +25,18 @@ button{cursor:pointer;border:0;border-radius:12px;font-size:.95rem;font-weight:6
 .progress .fill{height:100%;width:0%;background:var(--accent);transition:width .2s}.progress .lbl{font-size:.78rem;color:var(--muted);margin-top:4px}
 h3.sub{margin:26px 0 8px;font-size:1.05rem;color:var(--accent)}
 .formula{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:9px;padding:10px 14px;margin:12px 0;font-size:.98rem}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.figbox{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px}
+.figcap{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+.ex{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:12px 0}
+.ex .extitle{font-weight:800;color:var(--accent);font-size:1rem;margin:0 0 6px}
+.ex .steps{margin:6px 0 8px;padding-left:18px}
+.ex .steps li{margin:3px 0}
+.ex .uit{background:var(--good-soft);border-radius:8px;padding:7px 10px;font-weight:700;color:var(--good)}
 .block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
 .lees{background:#f2fdf5;border-left:4px solid var(--good);border-radius:9px;padding:10px 14px;margin:10px 0;font-size:.92rem}
 .lees code{background:#e3f6ea;border-color:#c2e6d2;color:#14603a}
-.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
+.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 14px;font-size:.84rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem}
 th,td{border:1px solid var(--border);padding:8px 11px;text-align:left}th{background:var(--bg)}
 code{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1px 5px;font-family:ui-monospace,Menlo,monospace}
@@ -66,7 +74,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <h1>Theorie — H13 — Ruimtefiguren</h1>
   <p>Gebaseerd op Pienter 1 · Leerjaar 1, aangevuld met externe uitleg en de vakfiche-notatie.</p>
 </header>
-<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 1</b> · Hoofdstuk 13 — Ruimtefiguren · <b>p. 481–524</b><br>Paragrafen: <code>13.1 Ruimtefiguren of lichamen</code> p.<b>482</b> · <code>13.2 Ontwikkeling van ruimtefiguren</code> p.<b>489</b> · <code>13.3 Oppervlakte van ruimtefiguren</code> p.<b>495</b> · <code>13.4 Volume van ruimtefiguren</code> p.<b>502</b></div>
+<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 1</b> · Hoofdstuk 13 — Ruimtefiguren · <b>p. 481–524</b><br>Paragrafen: <code>13.1 Ruimtefiguren of lichamen</code> p.<b>482</b> · <code>13.2 Ontwikkeling van ruimtefiguren</code> p.<b>489</b> · <code>13.3 Oppervlakte van ruimtefiguren</code> p.<b>495</b> · <code>13.4 Volume van ruimtefiguren</code> p.<b>502</b><br><a class="pdfopen" href="pienter-1.pdf#page=483" title="Open het hoofdstuk in Pienter">📄 Open dit hoofdstuk in de PDF (p. 481–524)</a></div>
 <div class="block"><p><b>Waar gaat dit over?</b> Ruimtefiguren (lichamen) hebben drie afmetingen: lengte, breedte en hoogte. Je leert kubus, balk, prisma en cilinder herkennen en je berekent er de oppervlakte en het volume van.</p>
 
 <h3>13.1 De onderdelen</h3>
@@ -101,6 +109,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <li>Bijleshuis &mdash; formules voor volume van ruimtefiguren</li>
   <li>Wijzer over de basisschool &mdash; inhoud omrekenen (liter en dm&sup3;)</li>
 </ul></div>
+<h3 class="sub">✍️ Voorbeelden (uitgewerkt)</h3><div class="ex"><p class="extitle">Oppervlakte van een kubus</p><ol class="steps"><li>Een kubus heeft ribbe z = 3 cm.</li><li>Oppervlakte = 6 · z² = 6 · 3².</li><li>Eerst de macht: 3² = 9, dan 6 · 9 = 54.</li><li>Een kubus heeft 6 gelijke vierkante vlakken, dus de oppervlakte is 54 cm².</li></ol><div class="uit">A = 54 cm²</div></div><div class="ex"><p class="extitle">Volume van een balk</p><ol class="steps"><li>Een balk is 5 cm lang, 4 cm breed en 2 cm hoog.</li><li>Volume = lengte · breedte · hoogte = 5 · 4 · 2.</li><li>Reken uit: 5 · 4 = 20 en 20 · 2 = 40.</li><li>Het volume is 40 cm³ (kubieke centimeter).</li></ol><div class="uit">V = 40 cm³</div></div><div class="ex"><p class="extitle">Volume omrekenen naar liter</p><ol class="steps"><li>Een aquarium is 2 dm breed, 2 dm diep en 3 dm hoog.</li><li>Volume = 2 · 2 · 3 = 12 dm³.</li><li>Weet je nog: 1 dm³ = 1 liter.</li><li>Dus 12 dm³ = 12 liter water.</li></ol><div class="uit">het aquarium heeft 12 liter inhoud</div></div><h3 class="sub">📊 Zelfstandig getekend</h3><div class="figgrid"><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ontwikkeling (net) van een kubus" style="max-width:100%;height:auto;display:block"><rect x="40" y="80" width="46" height="46" fill="#eef1ff" stroke="#2f5bff" stroke-width="1.8"/><rect x="86" y="80" width="46" height="46" fill="#eef1ff" stroke="#2f5bff" stroke-width="1.8"/><rect x="132" y="80" width="46" height="46" fill="#eef1ff" stroke="#2f5bff" stroke-width="1.8"/><rect x="178" y="80" width="46" height="46" fill="#eef1ff" stroke="#2f5bff" stroke-width="1.8"/><rect x="86" y="34" width="46" height="46" fill="#e9f9f0" stroke="#1a9d5c" stroke-width="1.8"/><rect x="86" y="126" width="46" height="46" fill="#fdf1dc" stroke="#f59e0b" stroke-width="1.8"/><text x="40" y="150" font-size="11" fill="#5b6478">uitvouwen → vouwen tot kubus met ribbe 3 cm</text></svg><div class="figcap">Ontwikkeling (net) van een kubus</div></div><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Machten: a² (oppervlakte), a³ (inhoud)" style="max-width:100%;height:auto;display:block"><rect x="45" y="60" width="70" height="70" fill="#2f5bff" opacity="0.7"/><text x="80" y="100" font-size="12" text-anchor="middle" fill="#fff">a²</text><polygon points="160,130 230,130 250,110 180,110" fill="#f59e0b" opacity="0.7"/><rect x="160" y="60" width="70" height="70" fill="#f59e0b" opacity="0.5"/><polygon points="180,110 250,110 250,180 180,180" fill="#f59e0b" opacity="0.3"/><text x="205" y="120" font-size="12" text-anchor="middle" fill="#fff">a³</text><text x="205" y="205" font-size="11" text-anchor="middle" fill="#1b2440" font-weight="700">aⁿ = macht</text><text x="205" y="222" font-size="11" text-anchor="middle" fill="#5b6478">a²=oppervlakte, a³=inhoud</text></svg><div class="figcap">Machten: a² (oppervlakte), a³ (inhoud)</div></div></div>
 <div class="block" style="background:var(--accent-soft)">
 <h3 style="margin:0;color:var(--accent)">📚 Verder verkennen (research per onderwerp)</h3>
 <ul class="res" style="margin:10px 0 0"><li>Bijleshuis &mdash; formules voor volume van ruimtefiguren (https://blog.bijleshuis.be/inhoud-volume-berekenen)</li><li>Wijzer over de basisschool &mdash; inhoud berekenen, liters en dm&sup3; (https://wijzeroverdebasisschool.nl/uitleg/inhoud-berekenen)</li></ul>
