@@ -25,10 +25,18 @@ button{cursor:pointer;border:0;border-radius:12px;font-size:.95rem;font-weight:6
 .progress .fill{height:100%;width:0%;background:var(--accent);transition:width .2s}.progress .lbl{font-size:.78rem;color:var(--muted);margin-top:4px}
 h3.sub{margin:26px 0 8px;font-size:1.05rem;color:var(--accent)}
 .formula{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:9px;padding:10px 14px;margin:12px 0;font-size:.98rem}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.figbox{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px}
+.figcap{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+.ex{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:12px 0}
+.ex .extitle{font-weight:800;color:var(--accent);font-size:1rem;margin:0 0 6px}
+.ex .steps{margin:6px 0 8px;padding-left:18px}
+.ex .steps li{margin:3px 0}
+.ex .uit{background:var(--good-soft);border-radius:8px;padding:7px 10px;font-weight:700;color:var(--good)}
 .block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
 .lees{background:#f2fdf5;border-left:4px solid var(--good);border-radius:9px;padding:10px 14px;margin:10px 0;font-size:.92rem}
 .lees code{background:#e3f6ea;border-color:#c2e6d2;color:#14603a}
-.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
+.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 14px;font-size:.84rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem}
 th,td{border:1px solid var(--border);padding:8px 11px;text-align:left}th{background:var(--bg)}
 code{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1px 5px;font-family:ui-monospace,Menlo,monospace}
@@ -66,7 +74,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <h1>Theorie — H3 — Kijken en observeren</h1>
   <p>Gebaseerd op Pienter 1 · Leerjaar 1, aangevuld met externe uitleg en de vakfiche-notatie.</p>
 </header>
-<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 1</b> · Hoofdstuk 3 — Kijken en observeren · <b>p. 77–116</b><br>Paragrafen: <code>3.1 Meetkunde observeren</code> p.<b>78</b> · <code>3.2 De basisbegrippen van de meetkunde</code> p.<b>86</b> · <code>3.3 De onderlinge ligging van lijnstukken en rechten</code> p.<b>99</b></div>
+<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 1</b> · Hoofdstuk 3 — Kijken en observeren · <b>p. 77–116</b><br>Paragrafen: <code>3.1 Meetkunde observeren</code> p.<b>78</b> · <code>3.2 De basisbegrippen van de meetkunde</code> p.<b>86</b> · <code>3.3 De onderlinge ligging van lijnstukken en rechten</code> p.<b>99</b><br><a class="pdfopen" href="pienter-1.pdf#page=79" title="Open het hoofdstuk in Pienter">📄 Open dit hoofdstuk in de PDF (p. 77–116)</a></div>
 <div class="block"><h3>Goed kijken naar figuren</h3>
 <p>In de meetkunde leer je goed kijken naar figuren. Je maakt daarbij een onderscheid tussen wat je <em>ziet</em> op een tekening en wat er <em>meetkundig bedoeld</em> wordt. Een tekening is niet altijd exact: vertrouw op de gegeven informatie, de symbolen en de metingen, niet alleen op hoe het eruitziet.</p>
 <h3>De basisbegrippen</h3>
@@ -94,6 +102,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
 <li><strong>Ruimtefiguren</strong> (driedimensionaal): kubus, balk, cilinder, piramide, bol ...</li>
 </ul>
 <p>Door twee verschillende punten gaat precies &eacute;&eacute;n rechte. Lijnstukken kunnen elkaar snijden, overlappen, los van elkaar liggen of in elkaars verlengde liggen.</p></div>
+<h3 class="sub">✍️ Voorbeelden (uitgewerkt)</h3><div class="ex"><p class="extitle">Rechte, halfrechte of lijnstuk?</p><ol class="steps"><li>Rechte AB is de oneindige rechte lijn door de punten A en B; hij heeft geen begin- of eindpunt.</li><li>Halfrechte [AB begint in A en loopt langs B oneindig ver door.</li><li>Lijnstuk [AB] heeft twee eindpunten, A en B, en ligt precies daartussen.</li></ol><div class="uit">Rechte AB, halfrechte [AB en lijnstuk [AB] zijn drie verschillende meetkundige begrippen.</div></div><div class="ex"><p class="extitle">Evenwijdig of loodrecht?</p><ol class="steps"><li>De rechten r en s liggen in hetzelfde vlak en hebben geen enkel punt gemeenschappelijk. Ze zijn evenwijdig: r // s.</li><li>De rechten p en q snijden elkaar in één punt en staan onder een rechte hoek van 90°. Ze zijn loodrecht: p ⊥ q.</li><li>Kort samen: rechten die elkaar niet snijden zijn evenwijdig; rechten die onder 90° snijden zijn loodrecht.</li></ol><div class="uit">r // s (evenwijdig) en p ⊥ q (loodrecht).</div></div><div class="ex"><p class="extitle">Een punt aanduiden met coördinaten</p><ol class="steps"><li>Een rooster heeft een horizontale as (x-as) en een verticale as (y-as).</li><li>Het punt (4, 2) duid je aan door 4 stappen naar rechts en 2 stappen omhoog te gaan.</li><li>Het eerste getal is dus altijd de x-plaats en het tweede getal de y-plaats.</li></ol><div class="uit">Het punt (4, 2) ligt 4 stappen rechts en 2 stappen omhoog van de oorsprong.</div></div><h3 class="sub">📊 Zelfstandig getekend</h3><div class="figgrid"><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evenwijdige en loodrechte rechten" style="max-width:100%;height:auto;display:block"><line x1="50" y1="70" x2="290" y2="70" stroke="#2f5bff" stroke-width="2.4"/><line x1="50" y1="110" x2="290" y2="110" stroke="#2f5bff" stroke-width="2.4"/><text x="50" y="52" font-size="11" fill="#2f5bff" font-weight="700">a ∥ b (evenwijdig)</text><line x1="230" y1="70" x2="230" y2="110" stroke="#f59e0b" stroke-width="2.2"/><text x="240" y="95" font-size="11" fill="#f59e0b" font-weight="700">⊥</text><text x="50" y="140" font-size="11" fill="#5b6478">een rechte ⊥ een evenwijdige paar</text></svg><div class="figcap">Evenwijdige en loodrechte rechten</div></div></div>
 <div class="block" style="background:var(--accent-soft)">
 <h3 style="margin:0;color:var(--accent)">📚 Verder verkennen (research per onderwerp)</h3>
 <ul class="res" style="margin:10px 0 0"><li>Wiskunde-interactief — Punt, rechte, halfrechte en lijnstuk (https://wiskunde-interactief.be/3meet_1basis_purelij.htm)</li><li>Computermeester — Snijdende lijnen: evenwijdige, snijdende en loodrechte rechten (https://www.computermeester.be/meetkunde-snijdende-lijnen.htm)</li><li>Digitale gereedschapskist — Rechte, halfrechte en lijnstuk (https://digitale-gereedschapskist.webnode.be/meetkundige-begrippen/rechte-halfrechte-lijnstuk)</li><li>Klascement — Vlakke figuren herkennen in ruimtefiguren (uitlegvideo) (https://www.klascement.net/video/160247/vlakke-figuren-herkennen-in-ruimtefiguren-uitlegvideo)</li></ul>
