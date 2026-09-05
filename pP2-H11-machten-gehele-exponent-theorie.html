@@ -25,10 +25,18 @@ button{cursor:pointer;border:0;border-radius:12px;font-size:.95rem;font-weight:6
 .progress .fill{height:100%;width:0%;background:var(--accent);transition:width .2s}.progress .lbl{font-size:.78rem;color:var(--muted);margin-top:4px}
 h3.sub{margin:26px 0 8px;font-size:1.05rem;color:var(--accent)}
 .formula{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:9px;padding:10px 14px;margin:12px 0;font-size:.98rem}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.figbox{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px}
+.figcap{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+.ex{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:12px 0}
+.ex .extitle{font-weight:800;color:var(--accent);font-size:1rem;margin:0 0 6px}
+.ex .steps{margin:6px 0 8px;padding-left:18px}
+.ex .steps li{margin:3px 0}
+.ex .uit{background:var(--good-soft);border-radius:8px;padding:7px 10px;font-weight:700;color:var(--good)}
 .block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
 .lees{background:#f2fdf5;border-left:4px solid var(--good);border-radius:9px;padding:10px 14px;margin:10px 0;font-size:.92rem}
 .lees code{background:#e3f6ea;border-color:#c2e6d2;color:#14603a}
-.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
+.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 14px;font-size:.84rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem}
 th,td{border:1px solid var(--border);padding:8px 11px;text-align:left}th{background:var(--bg)}
 code{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1px 5px;font-family:ui-monospace,Menlo,monospace}
@@ -66,7 +74,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <h1>Theorie — H11 — Machten (gehele exponent)</h1>
   <p>Gebaseerd op Pienter 2 · Leerjaar 2, aangevuld met externe uitleg en de vakfiche-notatie.</p>
 </header>
-<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 11 — Machten (gehele exponent) · <b>p. 398–432</b></div>
+<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 11 — Machten (gehele exponent) · <b>p. 398–432</b><br><a class="pdfopen" href="pienter-2.pdf#page=400" title="Open het hoofdstuk in Pienter">📄 Open dit hoofdstuk in de PDF (p. 398–432)</a></div>
 <div class="block"><h3>Machten met een gehele exponent</h3>
 <p>Je kent <strong>machten</strong> al met een natuurlijke exponent, zoals 2<sup>5</sup>. Bij een macht a<sup>n</sup> is <strong>a</strong> het grondtal en <strong>n</strong> de exponent. Nu breiden we uit naar <strong>gehele exponenten</strong> (getallen uit &#8484;), dus ook exponent 0 en negatieve exponenten.</p>
 
@@ -93,6 +101,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
 <div class="formula">a &middot; 10<sup>n</sup> &nbsp;&nbsp; met 1 &le; a &lt; 10 en n een geheel getal</div>
 <p>Voorbeelden: 35 000 = 3,5 &middot; 10<sup>4</sup> &nbsp; en &nbsp; 0,0042 = 4,2 &middot; 10<sup>&minus;3</sup>.</p>
 </div>
+<h3 class="sub">✍️ Voorbeelden (uitgewerkt)</h3><div class="ex"><p class="extitle">Negatieve exponent: 3⁻²</p><ol class="steps"><li>Een negatieve exponent geeft het omgekeerde: a⁻ⁿ = 1/aⁿ.</li><li>Dus 3⁻² = 1/3².</li><li>Reken de macht onderaan uit: 3² = 9, dus 3⁻² = 1/9.</li></ol><div class="uit">3⁻² = 1/9.</div></div><div class="ex"><p class="extitle">Machten vermenigvuldigen: 5³ · 5⁴</p><ol class="steps"><li>Bij machten met hetzelfde grondtal vermenigvuldigen tel je de exponenten op.</li><li>5³ · 5⁴ = 5³⁺⁴.</li><li>3 + 4 = 7, dus 5³ · 5⁴ = 5⁷.</li></ol><div class="uit">5³ · 5⁴ = 5⁷.</div></div><div class="ex"><p class="extitle">Wetenschappelijke notatie: 0,00072</p><ol class="steps"><li>Zet de komma zodat er één cijfer (ongelijk aan 0) voor staat: 7,2.</li><li>De komma verschuift 4 plaatsen naar rechts, dus de exponent is negatief: −4.</li><li>Dus 0,00072 = 7,2 · 10⁻⁴.</li></ol><div class="uit">0,00072 = 7,2 · 10⁻⁴.</div></div><h3 class="sub">📊 Zelfstandig getekend</h3><div class="figgrid"><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Machten: a² (oppervlakte), a³ (inhoud)" style="max-width:100%;height:auto;display:block"><rect x="45" y="60" width="70" height="70" fill="#2f5bff" opacity="0.7"/><text x="80" y="100" font-size="12" text-anchor="middle" fill="#fff">a²</text><polygon points="160,130 230,130 250,110 180,110" fill="#f59e0b" opacity="0.7"/><rect x="160" y="60" width="70" height="70" fill="#f59e0b" opacity="0.5"/><polygon points="180,110 250,110 250,180 180,180" fill="#f59e0b" opacity="0.3"/><text x="205" y="120" font-size="12" text-anchor="middle" fill="#fff">a³</text><text x="205" y="205" font-size="11" text-anchor="middle" fill="#1b2440" font-weight="700">aⁿ = macht</text><text x="205" y="222" font-size="11" text-anchor="middle" fill="#5b6478">a²=oppervlakte, a³=inhoud</text></svg><div class="figcap">Machten: a² (oppervlakte), a³ (inhoud)</div></div></div>
 <div class="block" style="background:var(--accent-soft)">
 <h3 style="margin:0;color:var(--accent)">📚 Verder verkennen (research per onderwerp)</h3>
 <ul class="res" style="margin:10px 0 0"><li>Wezooz Academy (BE) — Machten met rationale grondtallen en gehele exponenten berekenen (negatieve exponent positief maken, 1e graad) (https://www.wezoozacademy.be/video/1ste-graad-wiskunde-getallenleer-machten-en-vierkantswortels-machten-met-rationale-grondtallen-en-gehele-exponenten-berekenen-negatieve-exponent-positief-maken)</li><li>KU Leuven Ximera — Machten — definitie van a<sup>n</sup>, nulmacht, negatieve exponent en rekenregels (https://set.kuleuven.be/voorkennis/zomercursus/RemedWET/cursus/rekenen/machten)</li><li>Examenoverzicht — De wetenschappelijke notatie — uitleg met voorbeelden van grote en kleine getallen (https://www.examenoverzicht.nl/wiskunde/wetenschappelijke-notatie)</li></ul>
