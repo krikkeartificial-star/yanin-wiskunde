@@ -25,10 +25,18 @@ button{cursor:pointer;border:0;border-radius:12px;font-size:.95rem;font-weight:6
 .progress .fill{height:100%;width:0%;background:var(--accent);transition:width .2s}.progress .lbl{font-size:.78rem;color:var(--muted);margin-top:4px}
 h3.sub{margin:26px 0 8px;font-size:1.05rem;color:var(--accent)}
 .formula{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:9px;padding:10px 14px;margin:12px 0;font-size:.98rem}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.figbox{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px}
+.figcap{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+.ex{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:12px 0}
+.ex .extitle{font-weight:800;color:var(--accent);font-size:1rem;margin:0 0 6px}
+.ex .steps{margin:6px 0 8px;padding-left:18px}
+.ex .steps li{margin:3px 0}
+.ex .uit{background:var(--good-soft);border-radius:8px;padding:7px 10px;font-weight:700;color:var(--good)}
 .block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
 .lees{background:#f2fdf5;border-left:4px solid var(--good);border-radius:9px;padding:10px 14px;margin:10px 0;font-size:.92rem}
 .lees code{background:#e3f6ea;border-color:#c2e6d2;color:#14603a}
-.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
+.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 14px;font-size:.84rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem}
 th,td{border:1px solid var(--border);padding:8px 11px;text-align:left}th{background:var(--bg)}
 code{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1px 5px;font-family:ui-monospace,Menlo,monospace}
@@ -66,7 +74,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <h1>Theorie — H9 — Hoeken en rechten</h1>
   <p>Gebaseerd op Pienter 1 · Leerjaar 1, aangevuld met externe uitleg en de vakfiche-notatie.</p>
 </header>
-<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 1</b> · Hoofdstuk 9 — Hoeken en rechten · <b>p. 289–314</b><br>Paragrafen: <code>9.1 Hoeken indelen volgens de hoekgrootte</code> p.<b>290</b> · <code>9.2 De bissectrice van een hoek</code> p.<b>295</b> · <code>9.3 Evenwijdige rechten en loodlijnen</code> p.<b>298</b> · <code>9.4 Afstand</code> p.<b>306</b></div>
+<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 1</b> · Hoofdstuk 9 — Hoeken en rechten · <b>p. 289–314</b><br>Paragrafen: <code>9.1 Hoeken indelen volgens de hoekgrootte</code> p.<b>290</b> · <code>9.2 De bissectrice van een hoek</code> p.<b>295</b> · <code>9.3 Evenwijdige rechten en loodlijnen</code> p.<b>298</b> · <code>9.4 Afstand</code> p.<b>306</b><br><a class="pdfopen" href="pienter-1.pdf#page=291" title="Open het hoofdstuk in Pienter">📄 Open dit hoofdstuk in de PDF (p. 289–314)</a></div>
 <div class="block"><div>
 <h3>Opbouw van een hoek</h3>
 <p>Een hoek wordt gevormd door twee <strong>halfrechten</strong> met hetzelfde beginpunt. Dat beginpunt is het <strong>hoekpunt</strong>, de twee halfrechten zijn de <strong>benen</strong>. Een hoek noteer je bijvoorbeeld als <strong>&Acirc;</strong>, als <em>&alpha;</em>, of als <em>&Acirc;BC</em> (hoek met hoekpunt B).</p>
@@ -109,6 +117,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
 <li>De <strong>afstand tussen twee evenwijdige rechten</strong> is de lengte van een loodlijn tussen die twee rechten.</li>
 </ul>
 </div></div>
+<h3 class="sub">✍️ Voorbeelden (uitgewerkt)</h3><div class="ex"><p class="extitle">De bissectrice verdeelt een hoek</p><ol class="steps"><li>Een hoek meet 84°. Je tekent de bissectrice.</li><li>De bissectrice verdeelt de hoek in twee even grote hoeken.</li><li>84° : 2 = 42°.</li></ol><div class="uit">Elke helft meet 42°.</div></div><div class="ex"><p class="extitle">Welke soort hoek is 130°?</p><ol class="steps"><li>Sorteer de hoeken: scherp < 90°, recht = 90°, stomp tussen 90° en 180°, gestrekt = 180°.</li><li>130° ligt tussen 90° en 180°.</li><li>Dus het is een stompe hoek.</li></ol><div class="uit">Een hoek van 130° is een stompe hoek.</div></div><div class="ex"><p class="extitle">De middelloodlijn van een lijnstuk</p><ol class="steps"><li>Lijnstuk [AB] is 6 cm lang. Je tekent de middelloodlijn.</li><li>De middelloodlijn gaat door het midden van [AB]: 6 : 2 = 3 cm.</li><li>De middelloodlijn staat loodrecht op [AB].</li></ol><div class="uit">De middelloodlijn staat loodrecht op [AB] en loopt door het punt 3 cm vanaf A.</div></div><h3 class="sub">📊 Zelfstandig getekend</h3><div class="figgrid"><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Hoek + bissectrice" style="max-width:100%;height:auto;display:block"><line x1="60" y1="150" x2="230" y2="150" stroke="#1b2440" stroke-width="2"/><line x1="60" y1="150" x2="180" y2="70" stroke="#1b2440" stroke-width="2"/><path d="M96 150 A 90 90 0 0 0 150 96" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="4 3"/><line x1="60" y1="150" x2="205" y2="104" stroke="#1a9d5c" stroke-width="2.4"/><text x="120" y="118" font-size="11" fill="#f59e0b">α</text><text x="150" y="140" font-size="12" fill="#1a9d5c" font-weight="700">bissectrice</text><text x="60" y="172" font-size="11" fill="#5b6478">deelt de hoek in 2 gelijke delen</text></svg><div class="figcap">Hoek + bissectrice</div></div><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evenwijdige en loodrechte rechten" style="max-width:100%;height:auto;display:block"><line x1="50" y1="70" x2="290" y2="70" stroke="#2f5bff" stroke-width="2.4"/><line x1="50" y1="110" x2="290" y2="110" stroke="#2f5bff" stroke-width="2.4"/><text x="50" y="52" font-size="11" fill="#2f5bff" font-weight="700">a ∥ b (evenwijdig)</text><line x1="230" y1="70" x2="230" y2="110" stroke="#f59e0b" stroke-width="2.2"/><text x="240" y="95" font-size="11" fill="#f59e0b" font-weight="700">⊥</text><text x="50" y="140" font-size="11" fill="#5b6478">een rechte ⊥ een evenwijdige paar</text></svg><div class="figcap">Evenwijdige en loodrechte rechten</div></div></div>
 <div class="block" style="background:var(--accent-soft)">
 <h3 style="margin:0;color:var(--accent)">📚 Verder verkennen (research per onderwerp)</h3>
 <ul class="res" style="margin:10px 0 0"><li>Khan Academy (NL) — Hoeksoorten: overzicht van scherpe, rechte, stompe en gestrekte hoek (https://nl.khanacademy.org/math/basic-geo/basic-geo-angle/basic-geo-angle-types/a/angle-types-review)</li><li>Khan Academy (NL) — Evenwijdige en loodrechte rechten: herhaling (https://nl.khanacademy.org/math/basic-geo/basic-geo-lines/parallel-perp/a/parallel-perpendicular-review)</li><li>Jojoschool — Hoeken meten en tekenen, inclusief bissectrice en middelloodlijn (https://leren.jojoschool.nl/course/wiskunde/summary/hoeken-meten-en-tekenen)</li></ul>
