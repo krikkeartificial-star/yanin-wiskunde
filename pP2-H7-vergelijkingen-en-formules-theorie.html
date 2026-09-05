@@ -25,10 +25,18 @@ button{cursor:pointer;border:0;border-radius:12px;font-size:.95rem;font-weight:6
 .progress .fill{height:100%;width:0%;background:var(--accent);transition:width .2s}.progress .lbl{font-size:.78rem;color:var(--muted);margin-top:4px}
 h3.sub{margin:26px 0 8px;font-size:1.05rem;color:var(--accent)}
 .formula{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:9px;padding:10px 14px;margin:12px 0;font-size:.98rem}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.figbox{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px}
+.figcap{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+.ex{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:12px 0}
+.ex .extitle{font-weight:800;color:var(--accent);font-size:1rem;margin:0 0 6px}
+.ex .steps{margin:6px 0 8px;padding-left:18px}
+.ex .steps li{margin:3px 0}
+.ex .uit{background:var(--good-soft);border-radius:8px;padding:7px 10px;font-weight:700;color:var(--good)}
 .block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
 .lees{background:#f2fdf5;border-left:4px solid var(--good);border-radius:9px;padding:10px 14px;margin:10px 0;font-size:.92rem}
 .lees code{background:#e3f6ea;border-color:#c2e6d2;color:#14603a}
-.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
+.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 14px;font-size:.84rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem}
 th,td{border:1px solid var(--border);padding:8px 11px;text-align:left}th{background:var(--bg)}
 code{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1px 5px;font-family:ui-monospace,Menlo,monospace}
@@ -66,7 +74,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <h1>Theorie — H7 — Vergelijkingen en formules</h1>
   <p>Gebaseerd op Pienter 2 · Leerjaar 2, aangevuld met externe uitleg en de vakfiche-notatie.</p>
 </header>
-<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 7 — Vergelijkingen en formules · <b>p. 248–275</b></div>
+<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 7 — Vergelijkingen en formules · <b>p. 248–275</b><br><a class="pdfopen" href="pienter-2.pdf#page=250" title="Open het hoofdstuk in Pienter">📄 Open dit hoofdstuk in de PDF (p. 248–275)</a></div>
 <div class="block"><div class='chapter-intro'><p>In dit hoofdstuk leer je vergelijkingen oplossen en met formules werken. Een vergelijking is een gelijkheid met een onbekende: je zoekt de waarde die de gelijkheid waar maakt.</p></div>
 <h3>Wat is een vergelijking?</h3>
 <p>Een <strong>vergelijking</strong> is een gelijkheid waarin een of meer <strong>onbekenden</strong> voorkomen (een letter waarvan je de waarde zoekt, meestal <em>x</em>). De waarde die de vergelijking waar maakt, noem je de <strong>oplossing</strong>.</p>
@@ -96,6 +104,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
 <p>Let op de eenheid: omtrek is een lengte (bv. cm), oppervlakte is een vierkante eenheid (bv. cm&sup2;).</p>
 <h3>Een tekstvraag omzetten naar een vergelijking</h3>
 <p>Lees de opgave, kies een letter voor de onbekende en vertaal de zin stap voor stap. 'Het dubbele van een getal is 14' wordt <em>2x = 14</em>. Daarna los je de vergelijking op met de regels hierboven.</p></div>
+<h3 class="sub">✍️ Voorbeelden (uitgewerkt)</h3><div class="ex"><p class="extitle">Vergelijking oplossen: 4x − 7 = 17</p><ol class="steps"><li>Tel 7 op bij beide leden: 4x − 7 + 7 = 17 + 7, dus 4x = 24</li><li>Deel beide leden door 4: x = 24 ÷ 4 = 6</li><li>Controle: 4 · 6 − 7 = 24 − 7 = 17, dat klopt</li></ol><div class="uit">De oplossing is x = 6.</div></div><div class="ex"><p class="extitle">Zin omzetten in een vergelijking</p><ol class="steps"><li>Noem het onbekende getal x</li><li>'Het dubbele vermeerderd met 3' wordt de uitdrukking 2x + 3</li><li>Los op: 2x + 3 = 15 → 2x = 12 → x = 6</li></ol><div class="uit">Het getal is 6.</div></div><div class="ex"><p class="extitle">Formule gebruiken: omtrek rechthoek</p><ol class="steps"><li>Schrijf de formule: P = 2 · (l + b)</li><li>Vul in met l = 8 cm en b = 5 cm: P = 2 · (8 + 5)</li><li>Reken uit: P = 2 · 13 = 26 cm</li></ol><div class="uit">De omtrek van de rechthoek is 26 cm.</div></div><h3 class="sub">📊 Zelfstandig getekend</h3><div class="figgrid"><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Balans (vergelijking)" style="max-width:100%;height:auto;display:block"><line x1="170" y1="40" x2="170" y2="120" stroke="#1b2440" stroke-width="3"/><line x1="120" y1="40" x2="220" y2="40" stroke="#1b2440" stroke-width="3"/><line x1="120" y1="40" x2="120" y2="70" stroke="#1b2440" stroke-width="2"/><line x1="220" y1="40" x2="220" y2="70" stroke="#1b2440" stroke-width="2"/><path d="M120 70 h-56 a4 4 0 0 0 0 10 h56 z" fill="#2f5bff" opacity="0.85"/><path d="M220 70 h-56 a4 4 0 0 0 0 10 h56 z" fill="#f59e0b" opacity="0.85"/><text x="64" y="95" font-size="12" text-anchor="middle" fill="#fff">x+5</text><text x="164" y="95" font-size="12" text-anchor="middle" fill="#fff">12</text><ellipse cx="170" cy="128" rx="30" ry="8" fill="#5b6478" opacity="0.35"/><text x="170" y="170" font-size="12" text-anchor="middle" fill="#1b2440" font-weight="700">doe aan beide kanten hetzelfde</text></svg><div class="figcap">Balans (vergelijking)</div></div></div>
 <div class="block" style="background:var(--accent-soft)">
 <h3 style="margin:0;color:var(--accent)">📚 Verder verkennen (research per onderwerp)</h3>
 <ul class="res" style="margin:10px 0 0"><li>Khan Academy (nl) — Vergelijkingen, 1e jaar SO A-stroom: theorie en oefeningen over vergelijkingen met één onbekende (https://nl.khanacademy.org/math/1e-jaar-aso-wiskunde-a-stroom-be/x00089ac6acc20e34:vergelijkingen)</li><li>Algemath — Eerstegraadsvergelijkingen oplossen: Belgische wiskundesite met theorie + oefeningen (https://www.algemath.be/component/content/article/490-eerstegraadsvergelijkingen-oplossen-oefeningen.html?catid=11)</li><li>WisMon — Vergelijkingen oplossen: uitleg over linker- en rechterlid, stappenplan en voorbeelden (https://www.wismon.nl/nieuws/vergelijkingen-hoe-los-je-ze-op)</li><li>Klascement — Vergelijkingen van de eerste graad oplossen: stappenplan (https://www.klascement.net/downloadbaar-lesmateriaal/187487/vergelijkingen-van-de-eerste-graad-oplossen-stappenplan)</li></ul>
