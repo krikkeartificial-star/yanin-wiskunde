@@ -25,10 +25,18 @@ button{cursor:pointer;border:0;border-radius:12px;font-size:.95rem;font-weight:6
 .progress .fill{height:100%;width:0%;background:var(--accent);transition:width .2s}.progress .lbl{font-size:.78rem;color:var(--muted);margin-top:4px}
 h3.sub{margin:26px 0 8px;font-size:1.05rem;color:var(--accent)}
 .formula{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:9px;padding:10px 14px;margin:12px 0;font-size:.98rem}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.figbox{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px}
+.figcap{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+.ex{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:12px 0}
+.ex .extitle{font-weight:800;color:var(--accent);font-size:1rem;margin:0 0 6px}
+.ex .steps{margin:6px 0 8px;padding-left:18px}
+.ex .steps li{margin:3px 0}
+.ex .uit{background:var(--good-soft);border-radius:8px;padding:7px 10px;font-weight:700;color:var(--good)}
 .block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
 .lees{background:#f2fdf5;border-left:4px solid var(--good);border-radius:9px;padding:10px 14px;margin:10px 0;font-size:.92rem}
 .lees code{background:#e3f6ea;border-color:#c2e6d2;color:#14603a}
-.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
+.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 14px;font-size:.84rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem}
 th,td{border:1px solid var(--border);padding:8px 11px;text-align:left}th{background:var(--bg)}
 code{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1px 5px;font-family:ui-monospace,Menlo,monospace}
@@ -66,7 +74,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <h1>Theorie — H5 — Algebraïsch rekenen</h1>
   <p>Gebaseerd op Pienter 2 · Leerjaar 2, aangevuld met externe uitleg en de vakfiche-notatie.</p>
 </header>
-<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 5 — Algebraïsch rekenen · <b>p. 160–193</b></div>
+<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 5 — Algebraïsch rekenen · <b>p. 160–193</b><br><a class="pdfopen" href="pienter-2.pdf#page=162" title="Open het hoofdstuk in Pienter">📄 Open dit hoofdstuk in de PDF (p. 160–193)</a></div>
 <div class="block"><h3>Waarover gaat dit hoofdstuk?</h3>
 <p>In dit hoofdstuk leer je <strong>rekenen met letters</strong>: je maakt kennis met eentermen en veeltermen en je leert ze optellen, aftrekken, vermenigvuldigen en vereenvoudigen. Zo kan je omtrekken en oppervlaktes ook met letters uitdrukken.</p>
 
@@ -108,6 +116,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
 <h3>Getalwaarde berekenen</h3>
 <p>De waarde van een algebraïsche vorm bereken je door de letter te vervangen door een getal: voor <span class="formula-inline">3x + 2</span> met x = 4 krijg je 3 · 4 + 2 = 12 + 2 = <strong>14</strong>.</p>
 </div>
+<h3 class="sub">✍️ Voorbeelden (uitgewerkt)</h3><div class="ex"><p class="extitle">Gelijksoortige eentermen samenvoegen</p><ol class="steps"><li>Herleid: 9a − 4a + 2a.</li><li>Alle termen hebben hetzelfde lettergedeelte a, dus zijn ze gelijksoortig.</li><li>Tel de coëfficiënten: 9 − 4 + 2 = 7.</li></ol><div class="uit">9a − 4a + 2a = 7a.</div></div><div class="ex"><p class="extitle">Eentermen vermenigvuldigen</p><ol class="steps"><li>Bereken: 3x²y · 2x⁴.</li><li>Vermenigvuldig de coëfficiënten: 3 · 2 = 6.</li><li>Vermenigvuldig de letters: x² · x⁴ = x⁶ (exponenten optellen), y blijft.</li></ol><div class="uit">3x²y · 2x⁴ = 6x⁶y.</div></div><div class="ex"><p class="extitle">Merkwaardig product (a + b)(a − b)</p><ol class="steps"><li>Werk uit: (2x + 5)(2x − 5).</li><li>Herken het merkwaardig product (a + b)(a − b) = a² − b².</li><li>Hier is a = 2x en b = 5, dus (2x)² − 5² = 4x² − 25.</li></ol><div class="uit">(2x + 5)(2x − 5) = 4x² − 25.</div></div>
 <div class="block" style="background:var(--accent-soft)">
 <h3 style="margin:0;color:var(--accent)">📚 Verder verkennen (research per onderwerp)</h3>
 <ul class="res" style="margin:10px 0 0"><li>Hoe zit het? — Bewerkingen met veeltermen: optellen, aftrekken, vermenigvuldigen (https://hoezithet.nu/lessen/wiskunde/veeltermen/bewerkingen)</li><li>Khan Academy — Veeltermen voor het 2e jaar SO wiskunde A-stroom: optellen, aftrekken en vermenigvuldigen (https://nl.khanacademy.org/math/2e-jaar-so-wiskunde-a-stroom-be)</li><li>Studocu — Hfst 5: Algebraïsch rekenen en eentermen (uitleg en voorbeelden, Sint-Ritacollege 1e graad) (https://www.studocu.com/nl-be/document/sint-ritacollege-eerste-graad/wiskunde/hfst-5-algebraisch-rekenen-en-eentermen-uitleg/163052694)</li></ul>
