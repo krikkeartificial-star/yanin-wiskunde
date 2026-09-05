@@ -25,10 +25,18 @@ button{cursor:pointer;border:0;border-radius:12px;font-size:.95rem;font-weight:6
 .progress .fill{height:100%;width:0%;background:var(--accent);transition:width .2s}.progress .lbl{font-size:.78rem;color:var(--muted);margin-top:4px}
 h3.sub{margin:26px 0 8px;font-size:1.05rem;color:var(--accent)}
 .formula{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:9px;padding:10px 14px;margin:12px 0;font-size:.98rem}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.figbox{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px}
+.figcap{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+.ex{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:12px 0}
+.ex .extitle{font-weight:800;color:var(--accent);font-size:1rem;margin:0 0 6px}
+.ex .steps{margin:6px 0 8px;padding-left:18px}
+.ex .steps li{margin:3px 0}
+.ex .uit{background:var(--good-soft);border-radius:8px;padding:7px 10px;font-weight:700;color:var(--good)}
 .block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
 .lees{background:#f2fdf5;border-left:4px solid var(--good);border-radius:9px;padding:10px 14px;margin:10px 0;font-size:.92rem}
 .lees code{background:#e3f6ea;border-color:#c2e6d2;color:#14603a}
-.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
+.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 14px;font-size:.84rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem}
 th,td{border:1px solid var(--border);padding:8px 11px;text-align:left}th{background:var(--bg)}
 code{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1px 5px;font-family:ui-monospace,Menlo,monospace}
@@ -66,7 +74,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <h1>Theorie — H10 — Vierhoeken</h1>
   <p>Gebaseerd op Pienter 2 · Leerjaar 2, aangevuld met externe uitleg en de vakfiche-notatie.</p>
 </header>
-<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 10 — Vierhoeken · <b>p. 348–397</b></div>
+<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 2</b> · Hoofdstuk 10 — Vierhoeken · <b>p. 348–397</b><br><a class="pdfopen" href="pienter-2.pdf#page=350" title="Open het hoofdstuk in Pienter">📄 Open dit hoofdstuk in de PDF (p. 348–397)</a></div>
 <div class="block"><h3>Wat is een vierhoek?</h3>
 <p>Een <strong>vierhoek</strong> is een veelhoek met vier zijden en vier hoeken. De som van de vier binnenhoeken is altijd <strong>360&deg;</strong>. In een vierhoek met hoeken &alpha;, &beta;, &gamma; en &delta; geldt dus:</p>
 <div class="formula">&alpha; + &beta; + &gamma; + &delta; = 360&deg;</div>
@@ -95,6 +103,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
 <p>Een vierkant is ook een rechthoek, een ruit, een parallellogram en een trapezium. Een rechthoek en een ruit zijn allebei ook een parallellogram. Het trapezium is het ruimste begrip.</p>
 <div class="formula">vierkant &sub; rechthoek &sub; parallellogram &sub; trapezium &nbsp; en &nbsp; vierkant &sub; ruit &sub; parallellogram</div>
 </div>
+<h3 class="sub">✍️ Voorbeelden (uitgewerkt)</h3><div class="ex"><p class="extitle">Ontbrekende hoek berekenen</p><ol class="steps"><li>De som van de vier binnenhoeken van een vierhoek is altijd 360°.</li><li>Tel de drie bekende hoeken op: 95° + 80° + 110° = 285°.</li><li>Trek dat af van 360°: 360° − 285° = 75°.</li></ol><div class="uit">De vierde hoek δ is 75°.</div></div><div class="ex"><p class="extitle">Welke vierhoek is het?</p><ol class="steps"><li>De vierhoek heeft vier rechte hoeken: dat kan een rechthoek of een vierkant zijn.</li><li>Alle vier de zijden zijn even lang: alleen het vierkant heeft vier rechte hoeken én vier gelijke zijden.</li><li>Dus het is een vierkant.</li></ol><div class="uit">De vierhoek is een vierkant.</div></div><div class="ex"><p class="extitle">Een vierkant is ook een rechthoek én een ruit</p><ol class="steps"><li>Een rechthoek heeft vier rechte hoeken; een vierkant heeft die ook.</li><li>Een ruit heeft vier even lange zijden; een vierkant heeft die ook.</li><li>Dus een vierkant heeft alle eigenschappen van beide: het is ook een rechthoek én ook een ruit.</li></ol><div class="uit">Een vierkant is zowel een rechthoek als een ruit.</div></div><h3 class="sub">📊 Zelfstandig getekend</h3><div class="figgrid"><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vierhoek: trapezium (a // b)" style="max-width:100%;height:auto;display:block"><polygon points="60,140 280,140 230,60 110,60" fill="#eef1ff" stroke="#2f5bff" stroke-width="2"/><line x1="150" y1="140" x2="150" y2="130" stroke="#1a9d5c" stroke-width="2"/><line x1="166" y1="140" x2="166" y2="130" stroke="#1a9d5c" stroke-width="2"/><line x1="150" y1="60" x2="150" y2="70" stroke="#1a9d5c" stroke-width="2"/><line x1="166" y1="60" x2="166" y2="70" stroke="#1a9d5c" stroke-width="2"/><text x="170" y="50" font-size="12" text-anchor="middle" fill="#1b2440" font-weight="700">a</text><text x="170" y="158" font-size="12" text-anchor="middle" fill="#1b2440" font-weight="700">b</text><text x="170" y="176" font-size="11" text-anchor="middle" fill="#5b6478">a ∥ b (evenwijdig)</text></svg><div class="figcap">Vierhoek: trapezium (a // b)</div></div><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evenwijdige en loodrechte rechten" style="max-width:100%;height:auto;display:block"><line x1="50" y1="70" x2="290" y2="70" stroke="#2f5bff" stroke-width="2.4"/><line x1="50" y1="110" x2="290" y2="110" stroke="#2f5bff" stroke-width="2.4"/><text x="50" y="52" font-size="11" fill="#2f5bff" font-weight="700">a ∥ b (evenwijdig)</text><line x1="230" y1="70" x2="230" y2="110" stroke="#f59e0b" stroke-width="2.2"/><text x="240" y="95" font-size="11" fill="#f59e0b" font-weight="700">⊥</text><text x="50" y="140" font-size="11" fill="#5b6478">een rechte ⊥ een evenwijdige paar</text></svg><div class="figcap">Evenwijdige en loodrechte rechten</div></div></div>
 <div class="block" style="background:var(--accent-soft)">
 <h3 style="margin:0;color:var(--accent)">📚 Verder verkennen (research per onderwerp)</h3>
 <ul class="res" style="margin:10px 0 0"><li>Khan Academy (NL) — Vierhoeken: herhaling — eigenschappen van parallellogram, rechthoek, ruit, vierkant en trapezium (https://nl.khanacademy.org/math/basic-geo/basic-geometry-shapes/basic-geo-quadrilaterals/a/quadrilaterals-review)</li><li>Math4All — Meetkunde 2.1: Vierhoeken — namen en eigenschappen van bijzondere vierhoeken (https://info.math4all.nl/MathAdoreOpgaven/vb-gb21-print.html)</li><li>Klascement — leermiddelen over parallellogram, vierhoek en eigenschappen (https://www.klascement.net/iedereenteltmee/lesmateriaal?q=parallellogram)</li></ul>
