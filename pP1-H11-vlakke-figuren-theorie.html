@@ -25,10 +25,18 @@ button{cursor:pointer;border:0;border-radius:12px;font-size:.95rem;font-weight:6
 .progress .fill{height:100%;width:0%;background:var(--accent);transition:width .2s}.progress .lbl{font-size:.78rem;color:var(--muted);margin-top:4px}
 h3.sub{margin:26px 0 8px;font-size:1.05rem;color:var(--accent)}
 .formula{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:9px;padding:10px 14px;margin:12px 0;font-size:.98rem}
+.figgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin:12px 0}
+.figbox{background:#fff;border:1px solid var(--border);border-radius:12px;padding:10px}
+.figcap{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+.ex{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:14px 16px;margin:12px 0}
+.ex .extitle{font-weight:800;color:var(--accent);font-size:1rem;margin:0 0 6px}
+.ex .steps{margin:6px 0 8px;padding-left:18px}
+.ex .steps li{margin:3px 0}
+.ex .uit{background:var(--good-soft);border-radius:8px;padding:7px 10px;font-weight:700;color:var(--good)}
 .block{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:18px 20px;margin:12px 0}
 .lees{background:#f2fdf5;border-left:4px solid var(--good);border-radius:9px;padding:10px 14px;margin:10px 0;font-size:.92rem}
 .lees code{background:#e3f6ea;border-color:#c2e6d2;color:#14603a}
-.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
+.lees .pdfopen{display:inline-block;margin-top:8px;border-radius:999px;padding:5px 14px;font-size:.84rem;font-weight:700;text-decoration:none;background:var(--good);color:#fff}
 table{border-collapse:collapse;width:100%;margin:12px 0;font-size:.93rem}
 th,td{border:1px solid var(--border);padding:8px 11px;text-align:left}th{background:var(--bg)}
 code{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:1px 5px;font-family:ui-monospace,Menlo,monospace}
@@ -66,7 +74,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <h1>Theorie — H11 — Vlakke figuren</h1>
   <p>Gebaseerd op Pienter 1 · Leerjaar 1, aangevuld met externe uitleg en de vakfiche-notatie.</p>
 </header>
-<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 1</b> · Hoofdstuk 11 — Vlakke figuren · <b>p. 381–448</b><br>Paragrafen: <code>11.1 Vlakke figuren</code> p.<b>382</b> · <code>11.2 Cirkels</code> p.<b>383</b> · <code>11.3 Veelhoeken</code> p.<b>391</b> · <code>11.4 Driehoeken</code> p.<b>393</b> · <code>11.5 Vierhoeken</code> p.<b>415</b> · <code>11.6 Omtrek en oppervlakte</code> p.<b>429</b></div>
+<div class="lees">📖 <b>Lees dit in Pienter:</b> <b>Pienter 1</b> · Hoofdstuk 11 — Vlakke figuren · <b>p. 381–448</b><br>Paragrafen: <code>11.1 Vlakke figuren</code> p.<b>382</b> · <code>11.2 Cirkels</code> p.<b>383</b> · <code>11.3 Veelhoeken</code> p.<b>391</b> · <code>11.4 Driehoeken</code> p.<b>393</b> · <code>11.5 Vierhoeken</code> p.<b>415</b> · <code>11.6 Omtrek en oppervlakte</code> p.<b>429</b><br><a class="pdfopen" href="pienter-1.pdf#page=383" title="Open het hoofdstuk in Pienter">📄 Open dit hoofdstuk in de PDF (p. 381–448)</a></div>
 <div class="block"><p><b>Waar gaat dit over?</b> Vlakke figuren liggen helemaal in &eacute;&eacute;n vlak. Je bekijkt cirkels, driehoeken en vierhoeken, leert hun eigenschappen en berekent omtrek en oppervlakte.</p>
 
 <h3>11.1 De cirkel</h3>
@@ -116,6 +124,7 @@ label.opt.right .key{background:var(--good);color:#fff}label.opt.mychoice .key{b
   <li>Examencommissie &mdash; wiskundehoekje omtrek en oppervlakte</li>
   <li>oefen.be &mdash; memory omtrek en oppervlakte</li>
 </ul></div>
+<h3 class="sub">✍️ Voorbeelden (uitgewerkt)</h3><div class="ex"><p class="extitle">Omtrek en oppervlakte van een rechthoek</p><ol class="steps"><li>Een rechthoek is 7 cm lang en 3 cm breed.</li><li>Omtrek = 2 · (lengte + breedte) = 2 · (7 + 3) = 2 · 10 = 20 cm.</li><li>Oppervlakte = lengte · breedte = 7 · 3 = 21 cm².</li><li>Let op het verschil: omtrek is een lengte (cm), oppervlakte is ruimte (cm²).</li></ol><div class="uit">omtrek = 20 cm en oppervlakte = 21 cm²</div></div><div class="ex"><p class="extitle">Cirkel: straal, diameter en omtrek</p><ol class="steps"><li>De straal van een cirkel is r = 4 cm.</li><li>Diameter = 2 · straal = 2 · 4 = 8 cm.</li><li>Omtrek = 2 · π · r = 2 · 3,14 · 4 = 25,12 cm, dus ongeveer 25,1 cm.</li><li>Oppervlakte = π · r² = 3,14 · 16 = 50,24 cm², dus ongeveer 50,2 cm².</li></ol><div class="uit">diameter = 8 cm, omtrek ≈ 25,1 cm, oppervlakte ≈ 50,2 cm²</div></div><div class="ex"><p class="extitle">De derde hoek van een driehoek</p><ol class="steps"><li>In een driehoek zijn twee hoeken 60° en 70°.</li><li>De som van de binnenhoeken van elke driehoek is 180°.</li><li>Derde hoek = 180° - 60° - 70° = 180° - 130° = 50°.</li><li>Controle: 60° + 70° + 50° = 180°, dat klopt.</li></ol><div class="uit">de derde hoek is 50°</div></div><h3 class="sub">📊 Zelfstandig getekend</h3><div class="figgrid"><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rechthoek" style="max-width:100%;height:auto;display:block"><rect x="70" y="60" width="140" height="96" fill="#eef1ff" stroke="#2f5bff" stroke-width="2"/><text x="140.0" y="112.0" font-size="13" text-anchor="middle" fill="#1b2440" font-weight="700">A = a · b</text><text x="140.0" y="172" font-size="11" text-anchor="middle" fill="#5b6478">lengte a = 7 cm</text><text x="216" y="108.0" font-size="11" fill="#5b6478">b = 3 cm</text><text x="70" y="50" font-size="12" fill="#1b2440">omtrek = 2·(a+b)</text><text x="70" y="190" font-size="12" fill="#2f5bff" font-weight="700">oppervlakte = a · b</text></svg><div class="figcap">Rechthoek</div></div><div class="figbox"><svg viewBox="0 0 340 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cirkel" style="max-width:100%;height:auto;display:block"><circle cx="170" cy="92" r="4" fill="#eef1ff" stroke="#2f5bff" stroke-width="2"/><line x1="166" y1="92" x2="174" y2="92" stroke="#f59e0b" stroke-width="2"/><line x1="170" y1="88" x2="170" y2="96" stroke="#1a9d5c" stroke-width="2"/><text x="170" y="52" font-size="11" text-anchor="middle" fill="#1a9d5c">d (diameter)</text><text x="225" y="86" font-size="11" fill="#f59e0b">r</text><text x="170" y="164" font-size="11" text-anchor="middle" fill="#1b2440" font-weight="700">omtrek = 2πr · oppervlakte = πr²</text></svg><div class="figcap">Cirkel</div></div></div>
 <div class="block" style="background:var(--accent-soft)">
 <h3 style="margin:0;color:var(--accent)">📚 Verder verkennen (research per onderwerp)</h3>
 <ul class="res" style="margin:10px 0 0"><li>KU Leuven &mdash; formules omtrek & oppervlakte van vlakke figuren (PDF) (https://set.kuleuven.be/voorkennis/sintlucas/ximera-downloads/handout_pdf/x_zomercursusSintLucas/omtrek_oppervlakte_inhoud_formules_vlak.pdf)</li><li>Examencommissie &mdash; wiskundehoekje omtrek en oppervlakte vlakke figuren (https://examencommissie.be/sites/default/files/materiaal/wiskundehoekje/wiskoef/1vlakfig.htm)</li><li>oefen.be &mdash; memory omtrek en oppervlakte vlakke figuren (https://www.oefen.be/oefening/162223)</li></ul>
