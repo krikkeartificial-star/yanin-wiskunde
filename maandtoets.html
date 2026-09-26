@@ -548,7 +548,7 @@ document.getElementById('btnCheck').addEventListener('click',function(){
       verdict.textContent=(chosen===null?"✗ Niet beantwoord":"✗ Fout")+" — juist antwoord: "+letters[right]+". "+box.querySelectorAll('label.opt .txt')[right].textContent;
       if(chosen!==null)labels[chosen].classList.add('mychoice');}
     verdict.style.display='block';
-    box.querySelector('.exp').classList.add('show');
+    box.querySelectorAll('.exp').forEach(function(e){e.classList.add('show');});
     box.querySelector('.bron').style.display='block';
     labels.forEach(function(l){l.querySelector('input').disabled=true;});
   });
