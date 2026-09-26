@@ -21,10 +21,6 @@ header .crumb a{color:#fff;text-decoration:none}
 button{cursor:pointer;border:0;border-radius:12px;font-size:.93rem;font-weight:600;padding:11px 18px;font-family:inherit}
 .btn-check{background:var(--accent);color:#fff}
 .btn-reset{background:var(--card);color:var(--muted);border:1px solid var(--border)}
-.btn-red{background:var(--amber-soft);color:var(--amber);border:1.5px solid #f0d9a8;border-radius:999px;
-         padding:5px 12px;font-size:.78rem;font-weight:700;white-space:nowrap}
-.btn-red:hover{background:var(--amber);color:#fff}
-.btn-red.on{background:var(--amber);color:#fff}
 .scorebox{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:8px 14px;font-weight:700;display:flex;align-items:center;gap:8px}
 .scorebox .n{font-size:1.4rem;color:var(--accent)}
 .progress{flex:1;min-width:150px}.progress .track{height:8px;background:var(--border);border-radius:999px;overflow:hidden}
@@ -95,509 +91,400 @@ footer{margin-top:26px;color:var(--muted);font-size:.82rem}
 </header>
 <div class="info">
   <b>Zo werkt het:</b> kies per vraag één antwoord. Klik daarna <b>✓ Controleer</b> — je krijgt je score,
-  per onderwerp een apart cijfer, en bij elke vraag de uitleg. Vast? Klik op <b>💡 Redenering</b> naast de vraag
-  voor de volledige oplossingsweg. <b>Reken eerst op papier</b>, gebruik de toets daarna om te controleren.
-  <br><br>Bij elke vraag staat ook de <b>bronpagina in Pienter 1</b> — die zie je pas na het controleren.
+  per onderwerp een apart cijfer, de uitleg bij elke vraag en de bronpagina in Pienter 1.
+  <b>Reken eerst zelf op papier</b>: er staat nergens een uitwerking vooraf, dus denk eerst, kies dan.
+  <br><br>De mail naar papa vertrekt automatisch zodra alle 54 vragen ingevuld zijn.
 </div>
 <div class="sticky"><div class="bar">
   <button class="btn-check" id="btnCheck">✓ Controleer</button>
   <button class="btn-reset" id="btnReset">Opnieuw</button>
-  <button class="btn-red" id="btnAll">💡 Alle redeneringen</button>
   <div class="scorebox">Score <span class="n" id="liveN">0</span>/54</div>
   <div class="progress"><div class="track"><div class="fill" id="fill"></div></div><div class="lbl" id="progLbl">0 van 54</div></div>
 </div></div>
 <nav class="chips" id="navchips"><a href="#sec-basis" data-u="basis" data-label="Basis">Basis</a><a href="#sec-h1" data-u="h1" data-label="H1 Getallen">H1 Getallen</a><a href="#sec-h2" data-u="h2" data-label="H2 Natuurlijke getallen">H2 Natuurlijke getallen</a><a href="#sec-h4" data-u="h4" data-label="H4 Breuken">H4 Breuken</a><a href="#sec-h8" data-u="h8" data-label="H8 Gehele getallen">H8 Gehele getallen</a><a href="#sec-h10" data-u="h10" data-label="H10 Rationale + procenten">H10 Rationale + procenten</a></nav>
 <div id="quiz"><h2 class="sec" id="sec-basis">1. Basis &amp; rekenvaardigheid <span style="font-weight:400;color:var(--muted);font-size:.85rem">(Blok 0 · week 1–2, 10 vragen)</span></h2>
 <p class="secsub">Kies per vraag één antwoord. 10 vragen.</p><div class="q" data-i="0" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="1" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 1 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 1 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Bereken uit het hoofd: 12 − 6 : 3 = ?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q0" value="0"><span class="key">A</span><span class="txt">2</span></label><label class="opt"><input type="radio" name="q0" value="1"><span class="key">B</span><span class="txt">4</span></label><label class="opt"><input type="radio" name="q0" value="2"><span class="key">C</span><span class="txt">6</span></label><label class="opt"><input type="radio" name="q0" value="3"><span class="key">D</span><span class="txt">10</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Delen gaat vóór aftrekken: je rekent eerst 6 : 3 uit en daarna pas 12 − 2.</div>
-  <div class="red" id="red-0"><b>💡 Redenering</b><ol><li>Er staan geen haakjes, dus eerst de deling: 6 : 3 = 2.</li><li>Nu de aftrekking: 12 − 2 = 10.</li><li>Dus 12 − 6 : 3 = 10.</li></ol><span class="br">📖 Pienter 1, p. 153</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 153</div>
 </div><div class="q" data-i="1" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="1" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 2 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 2 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Rond 33,687 af op een honderdste.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q1" value="0"><span class="key">A</span><span class="txt">34</span></label><label class="opt"><input type="radio" name="q1" value="1"><span class="key">B</span><span class="txt">33,69</span></label><label class="opt"><input type="radio" name="q1" value="2"><span class="key">C</span><span class="txt">33,68</span></label><label class="opt"><input type="radio" name="q1" value="3"><span class="key">D</span><span class="txt">33,7</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Een honderdste is het tweede cijfer na de komma. Je kijkt naar het cijfer erachter om te beslissen of je naar boven afrondt.</div>
-  <div class="red" id="red-1"><b>💡 Redenering</b><ol><li>Zet een streepje na het tweede cijfer na de komma: 33,68|7.</li><li>Het cijfer achter het streepje is 7. Dat is 5 of meer, dus het honderdste cijfer gaat één omhoog.</li><li>8 wordt 9, dus je krijgt 33,69.</li><li>Dus 33,687 afgerond op een honderdste is 33,69.</li></ol><span class="br">📖 Pienter 1, p. 130</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 130</div>
 </div><div class="q" data-i="2" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="2" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 3 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 3 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Bereken: 2 · (6 + 3) · 5 = ?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q2" value="0"><span class="key">A</span><span class="txt">45</span></label><label class="opt"><input type="radio" name="q2" value="1"><span class="key">B</span><span class="txt">27</span></label><label class="opt"><input type="radio" name="q2" value="2"><span class="key">C</span><span class="txt">60</span></label><label class="opt"><input type="radio" name="q2" value="3"><span class="key">D</span><span class="txt">90</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Werk altijd eerst de haakjes uit. Daarna vermenigvuldig je van links naar rechts.</div>
-  <div class="red" id="red-2"><b>💡 Redenering</b><ol><li>Eerst de haakjes: 6 + 3 = 9.</li><li>Vermenigvuldig van links naar rechts: 2 · 9 = 18.</li><li>Nog eens maal 5: 18 · 5 = 90.</li><li>Dus 2 · (6 + 3) · 5 = 90.</li></ol><span class="br">📖 Pienter 1, p. 152</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 152</div>
 </div><div class="q" data-i="3" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="2" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 4 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 4 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Herleid 3 250 mm naar decimeter.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q3" value="0"><span class="key">A</span><span class="txt">325 dm</span></label><label class="opt"><input type="radio" name="q3" value="1"><span class="key">B</span><span class="txt">3,25 dm</span></label><label class="opt"><input type="radio" name="q3" value="2"><span class="key">C</span><span class="txt">32,5 dm</span></label><label class="opt"><input type="radio" name="q3" value="3"><span class="key">D</span><span class="txt">0,325 dm</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Van millimeter naar decimeter is twee stappen naar links in de lengtetabel, dus deel je twee keer door 10.</div>
-  <div class="red" id="red-3"><b>💡 Redenering</b><ol><li>In de tabel staan mm, cm en dm naast elkaar. Van mm naar dm is twee stappen naar links.</li><li>Elke stap naar links betekent : 10.</li><li>3 250 mm : 10 = 325 cm en 325 cm : 10 = 32,5 dm.</li><li>Dus 3 250 mm = 32,5 dm.</li></ol><span class="br">📖 Pienter 1, p. 189</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 189</div>
 </div><div class="q" data-i="4" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="2" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 5 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 5 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Een jas kost € 120. Je krijgt 25 % korting. Hoeveel moet je nog betalen?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q4" value="0"><span class="key">A</span><span class="txt">€ 90</span></label><label class="opt"><input type="radio" name="q4" value="1"><span class="key">B</span><span class="txt">€ 96</span></label><label class="opt"><input type="radio" name="q4" value="2"><span class="key">C</span><span class="txt">€ 95</span></label><label class="opt"><input type="radio" name="q4" value="3"><span class="key">D</span><span class="txt">€ 30</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Bereken eerst hoeveel 25 % van € 120 is. Die korting trek je daarna af van de beginprijs.</div>
-  <div class="red" id="red-4"><b>💡 Redenering</b><ol><li>25 % is hetzelfde als 25/100 = 1/4.</li><li>1/4 van € 120 = € 120 : 4 = € 30. Dat is de korting.</li><li>Trek de korting af van de beginprijs: € 120 − € 30 = € 90.</li><li>Je moet nog € 90 betalen.</li></ol><span class="br">📖 Pienter 1, p. 368</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 368</div>
 </div><div class="q" data-i="5" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="3" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 6 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 6 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Bereken: 823,5 − (525,6 + 27,87) = ?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q5" value="0"><span class="key">A</span><span class="txt">270,3</span></label><label class="opt"><input type="radio" name="q5" value="1"><span class="key">B</span><span class="txt">325,77</span></label><label class="opt"><input type="radio" name="q5" value="2"><span class="key">C</span><span class="txt">297,9</span></label><label class="opt"><input type="radio" name="q5" value="3"><span class="key">D</span><span class="txt">270,03</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Reken eerst de som tussen de haakjes uit. Die som trek je daarna af van 823,5.</div>
-  <div class="red" id="red-5"><b>💡 Redenering</b><ol><li>Eerst de haakjes: 525,6 + 27,87 = 553,47.</li><li>Zet de komma&#x27;s netjes onder elkaar: 823,50 − 553,47.</li><li>823,50 − 553,47 = 270,03.</li><li>Dus 823,5 − (525,6 + 27,87) = 270,03.</li></ol><span class="br">📖 Pienter 1, p. 139</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 139</div>
 </div><div class="q" data-i="6" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="3" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 7 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 7 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Bereken: 5/6 + 7/8 = ?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q6" value="0"><span class="key">A</span><span class="txt">41/24</span></label><label class="opt"><input type="radio" name="q6" value="1"><span class="key">B</span><span class="txt">13/24</span></label><label class="opt"><input type="radio" name="q6" value="2"><span class="key">C</span><span class="txt">35/48</span></label><label class="opt"><input type="radio" name="q6" value="3"><span class="key">D</span><span class="txt">12/14</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>De breuken zijn ongelijknamig. Maak ze eerst gelijknamig en tel dan de tellers op.</div>
-  <div class="red" id="red-6"><b>💡 Redenering</b><ol><li>Zoek het kgv van 6 en 8. Dat is 24, dus je maakt de breuken gelijknamig met noemer 24.</li><li>5/6 = 20/24 en 7/8 = 21/24.</li><li>Tel de tellers op en behoud de noemer: 20 + 21 = 41, dus 41/24.</li><li>41/24 kun je niet meer vereenvoudigen. Het antwoord is 41/24 = 1 + 17/24.</li></ol><span class="br">📖 Pienter 1, p. 121 en p. 133</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 121 en p. 133</div>
 </div><div class="q" data-i="7" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="3" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 8 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 8 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Bereken en vereenvoudig je antwoord: 5/6 · 3/10 = ?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q7" value="0"><span class="key">A</span><span class="txt">2/5</span></label><label class="opt"><input type="radio" name="q7" value="1"><span class="key">B</span><span class="txt">15/16</span></label><label class="opt"><input type="radio" name="q7" value="2"><span class="key">C</span><span class="txt">1/4</span></label><label class="opt"><input type="radio" name="q7" value="3"><span class="key">D</span><span class="txt">1/2</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Vermenigvuldig teller met teller en noemer met noemer. Vereenvoudig daarna je antwoord.</div>
-  <div class="red" id="red-7"><b>💡 Redenering</b><ol><li>Vermenigvuldig de tellers: 5 · 3 = 15.</li><li>Vermenigvuldig de noemers: 6 · 10 = 60.</li><li>Dat geeft 15/60.</li><li>Deel teller en noemer door 15: 15/60 = 1/4.</li></ol><span class="br">📖 Pienter 1, p. 143</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 143</div>
 </div><div class="q" data-i="8" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="3" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 9 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 9 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Herleid 5,47 m² naar vierkante centimeter.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q8" value="0"><span class="key">A</span><span class="txt">54 700 cm²</span></label><label class="opt"><input type="radio" name="q8" value="1"><span class="key">B</span><span class="txt">547 000 cm²</span></label><label class="opt"><input type="radio" name="q8" value="2"><span class="key">C</span><span class="txt">547 cm²</span></label><label class="opt"><input type="radio" name="q8" value="3"><span class="key">D</span><span class="txt">5 470 cm²</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Bij oppervlaktematen is elke stap in de tabel × 100 of : 100. Van m² naar cm² zijn dat twee stappen.</div>
-  <div class="red" id="red-8"><b>💡 Redenering</b><ol><li>In de oppervlaktetabel staat cm² twee plaatsen rechts van m².</li><li>Elke stap naar rechts betekent × 100.</li><li>5,47 m² × 100 = 547 dm² en daarna 547 dm² × 100 = 54 700 cm².</li><li>Dus 5,47 m² = 54 700 cm².</li></ol><span class="br">📖 Pienter 1, p. 438</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 438</div>
 </div><div class="q" data-i="9" data-u="basis" data-ut="Basis &amp; rekenvaardigheid" data-lv="3" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 10 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 10 van 54 · Basis &amp; rekenvaardigheid<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Een vierkant heeft een omtrek van 20 cm. Bereken de oppervlakte van dat vierkant.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q9" value="0"><span class="key">A</span><span class="txt">5 cm²</span></label><label class="opt"><input type="radio" name="q9" value="1"><span class="key">B</span><span class="txt">25 cm²</span></label><label class="opt"><input type="radio" name="q9" value="2"><span class="key">C</span><span class="txt">100 cm²</span></label><label class="opt"><input type="radio" name="q9" value="3"><span class="key">D</span><span class="txt">20 cm²</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Zoek eerst de zijde van het vierkant met de formule P = 4 · z. Bereken daarna de oppervlakte met A = z².</div>
-  <div class="red" id="red-9"><b>💡 Redenering</b><ol><li>De omtrek van een vierkant is P = 4 · z, dus 20 = 4 · z.</li><li>Dan is de zijde z = 20 : 4 = 5 cm.</li><li>De oppervlakte is A = z² = 5 · 5 = 25.</li><li>De oppervlakte is een oppervlaktemaat, dus het antwoord is 25 cm².</li></ol><span class="br">📖 Pienter 1, p. 432-433</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 432-433</div>
 </div><h2 class="sec" id="sec-h1">2. P1-H1 Getallen <span style="font-weight:400;color:var(--muted);font-size:.85rem">(Blok A · week 3, 9 vragen)</span></h2>
 <p class="secsub">Kies per vraag één antwoord. 9 vragen.</p><div class="lees">📖 <b>Leerstof in Pienter 1:</b> Hoofdstuk 1, p. 7–28</div><div class="q" data-i="10" data-u="h1" data-ut="P1-H1 Getallen" data-lv="1" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 11 van 54 · P1-H1 Getallen<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 11 van 54 · P1-H1 Getallen<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Met hoeveel verschillende cijfers schrijf je alle getallen in ons tientallig stelsel?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q10" value="0"><span class="key">A</span><span class="txt">tien cijfers, namelijk 0 tot en met 9</span></label><label class="opt"><input type="radio" name="q10" value="1"><span class="key">B</span><span class="txt">elf cijfers, namelijk 0 tot en met 10</span></label><label class="opt"><input type="radio" name="q10" value="2"><span class="key">C</span><span class="txt">negen cijfers, namelijk 1 tot en met 9</span></label><label class="opt"><input type="radio" name="q10" value="3"><span class="key">D</span><span class="txt">honderd cijfers, namelijk 00 tot en met 99</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>In ons tientallig stelsel zijn er tien cijfers: 0, 1, 2, 3, 4, 5, 6, 7, 8 en 9. Met die tien tekens schrijf je elk getal.</div>
-  <div class="red" id="red-10"><b>💡 Redenering</b><ol><li>Een cijfer is een teken waarmee je een getal schrijft.</li><li>In ons stelsel zijn er tien van die tekens: 0, 1, 2, 3, 4, 5, 6, 7, 8 en 9.</li><li>Het cijfer 0 hoort er dus ook bij; daarom zijn het er tien en niet negen.</li></ol><span class="br">📖 Pienter 1, p. 7</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 7</div>
 </div><div class="q" data-i="11" data-u="h1" data-ut="P1-H1 Getallen" data-lv="1" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 12 van 54 · P1-H1 Getallen<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 12 van 54 · P1-H1 Getallen<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Hoeveel is het Romeinse getalteken IX in onze cijfers?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q11" value="0"><span class="key">A</span><span class="txt">11</span></label><label class="opt"><input type="radio" name="q11" value="1"><span class="key">B</span><span class="txt">14</span></label><label class="opt"><input type="radio" name="q11" value="2"><span class="key">C</span><span class="txt">4</span></label><label class="opt"><input type="radio" name="q11" value="3"><span class="key">D</span><span class="txt">9</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>X = 10 en I = 1. Een teken links van een groter teken trek je af, dus IX = 10 − 1 = 9.</div>
-  <div class="red" id="red-11"><b>💡 Redenering</b><ol><li>X heeft waarde 10 en I heeft waarde 1.</li><li>De I staat links van de X, dus je moet aftrekken.</li><li>IX = 10 − 1 = 9.</li></ol><span class="br">📖 Pienter 1, p. 9</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 9</div>
 </div><div class="q" data-i="12" data-u="h1" data-ut="P1-H1 Getallen" data-lv="2" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 13 van 54 · P1-H1 Getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 13 van 54 · P1-H1 Getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Je duikt 3 m onder de zeespiegel. Met welk getal geef je die diepte het best aan?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q12" value="0"><span class="key">A</span><span class="txt">−3</span></label><label class="opt"><input type="radio" name="q12" value="1"><span class="key">B</span><span class="txt">3</span></label><label class="opt"><input type="radio" name="q12" value="2"><span class="key">C</span><span class="txt">−30</span></label><label class="opt"><input type="radio" name="q12" value="3"><span class="key">D</span><span class="txt">0,3</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Onder de zeespiegel werk je met negatieve getallen. Drie meter onder het niveau van de zeespiegel noteer je als −3.</div>
-  <div class="red" id="red-12"><b>💡 Redenering</b><ol><li>Je zoekt een getal dat &#x27;onder nul&#x27; uitdrukt: dat is negatief.</li><li>De afstand tot de zeespiegel is 3 m.</li><li>Je schrijft dus −3 (m).</li></ol><span class="br">📖 Pienter 1, p. 15</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 15</div>
 </div><div class="q" data-i="13" data-u="h1" data-ut="P1-H1 Getallen" data-lv="2" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 14 van 54 · P1-H1 Getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 14 van 54 · P1-H1 Getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Wat betekent 4 ∉ {1, 2, 3}?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q13" value="0"><span class="key">A</span><span class="txt">4 is groter dan elk element van de verzameling {1, 2, 3}</span></label><label class="opt"><input type="radio" name="q13" value="1"><span class="key">B</span><span class="txt">4 is geen element van de verzameling {1, 2, 3}</span></label><label class="opt"><input type="radio" name="q13" value="2"><span class="key">C</span><span class="txt">4 is een deelverzameling van de verzameling {1, 2, 3}</span></label><label class="opt"><input type="radio" name="q13" value="3"><span class="key">D</span><span class="txt">4 is een element van de verzameling {1, 2, 3}</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Het symbool ∉ betekent &#x27;is geen element van&#x27;. Het getal 4 zit niet tussen 1, 2 en 3, dus 4 ∉ {1, 2, 3}.</div>
-  <div class="red" id="red-13"><b>💡 Redenering</b><ol><li>Je kijkt naar het symbool tussen 4 en de accolades: dat is ∉.</li><li>∉ betekent &#x27;is geen element van&#x27;.</li><li>De verzameling is {1, 2, 3}; 4 staat er niet in, dus de uitspraak klopt.</li></ol><span class="br">📖 Pienter 1, p. 16</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 16</div>
 </div><div class="q" data-i="14" data-u="h1" data-ut="P1-H1 Getallen" data-lv="2" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 15 van 54 · P1-H1 Getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 15 van 54 · P1-H1 Getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">In een spreadsheet bereken je de som van een reeks getallen met een formule. Daarna verander je één getal uit die reeks. Wat gebeurt er met de som?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q14" value="0"><span class="key">A</span><span class="txt">Je moet de som zelf helemaal opnieuw intikken</span></label><label class="opt"><input type="radio" name="q14" value="1"><span class="key">B</span><span class="txt">Het rekenblad past de som automatisch aan</span></label><label class="opt"><input type="radio" name="q14" value="2"><span class="key">C</span><span class="txt">De formule verdwijnt uit het werkblad</span></label><label class="opt"><input type="radio" name="q14" value="3"><span class="key">D</span><span class="txt">De som blijft hetzelfde als daarvoor</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Een spreadsheet rekent met formules: als je een getal uit de reeks aanpast, past het rekenblad de som automatisch aan.</div>
-  <div class="red" id="red-14"><b>💡 Redenering</b><ol><li>In een cel staat geen vast getal, maar een formule.</li><li>De formule gebruikt de getallen uit de andere cellen.</li><li>Als je zo&#x27;n getal wijzigt, rekent de formule opnieuw en verandert de som.</li></ol><span class="br">📖 Pienter 1, p. 20</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 20</div>
 </div><div class="q" data-i="15" data-u="h1" data-ut="P1-H1 Getallen" data-lv="3" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 16 van 54 · P1-H1 Getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 16 van 54 · P1-H1 Getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Welke uitspraak over de getallenverzamelingen is juist?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q15" value="0"><span class="key">A</span><span class="txt">ℕ ⊄ ℤ, want niet elk natuurlijk getal is geheel</span></label><label class="opt"><input type="radio" name="q15" value="1"><span class="key">B</span><span class="txt">ℚ ⊂ ℤ, want elk rationaal getal is ook geheel</span></label><label class="opt"><input type="radio" name="q15" value="2"><span class="key">C</span><span class="txt">ℕ ⊂ ℤ, want elk natuurlijk getal is ook geheel</span></label><label class="opt"><input type="radio" name="q15" value="3"><span class="key">D</span><span class="txt">ℤ ⊂ ℕ, want elk geheel getal is ook natuurlijk</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Elk natuurlijk getal is geheel, dus ℕ is een deelverzameling van ℤ. Het omgekeerde geldt niet: −3 is geheel, maar niet natuurlijk.</div>
-  <div class="red" id="red-15"><b>💡 Redenering</b><ol><li>ℕ = {0, 1, 2, 3, ...} en ℤ = {..., -3, -2, -1, 0, 1, 2, ...}.</li><li>Neem een natuurlijk getal, bijvoorbeeld 5: dat zit ook in ℤ.</li><li>Alle elementen van ℕ zitten in ℤ, dus ℕ ⊂ ℤ.</li></ol><span class="br">📖 Pienter 1, p. 17</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 17</div>
 </div><div class="q" data-i="16" data-u="h1" data-ut="P1-H1 Getallen" data-lv="3" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 17 van 54 · P1-H1 Getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 17 van 54 · P1-H1 Getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Hoeveel is de Romeinse notatie CDXLIV in onze cijfers?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q16" value="0"><span class="key">A</span><span class="txt">494</span></label><label class="opt"><input type="radio" name="q16" value="1"><span class="key">B</span><span class="txt">446</span></label><label class="opt"><input type="radio" name="q16" value="2"><span class="key">C</span><span class="txt">454</span></label><label class="opt"><input type="radio" name="q16" value="3"><span class="key">D</span><span class="txt">444</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Je leest de tekens van links naar rechts: CD = 400, XL = 40 en IV = 4, samen 444.</div>
-  <div class="red" id="red-16"><b>💡 Redenering</b><ol><li>C = 100 en D = 500; C staat links van D, dus CD = 500 − 100 = 400.</li><li>X = 10 en L = 50; X staat links van L, dus XL = 50 − 10 = 40.</li><li>I = 1 en V = 5; I staat links van V, dus IV = 5 − 1 = 4.</li><li>400 + 40 + 4 = 444.</li></ol><span class="br">📖 Pienter 1, p. 9</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 9</div>
 </div><div class="q" data-i="17" data-u="h1" data-ut="P1-H1 Getallen" data-lv="3" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 18 van 54 · P1-H1 Getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 18 van 54 · P1-H1 Getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Bereken 6a + 2b voor a = 5 en b = 3.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q17" value="0"><span class="key">A</span><span class="txt">32</span></label><label class="opt"><input type="radio" name="q17" value="1"><span class="key">B</span><span class="txt">18</span></label><label class="opt"><input type="radio" name="q17" value="2"><span class="key">C</span><span class="txt">30</span></label><label class="opt"><input type="radio" name="q17" value="3"><span class="key">D</span><span class="txt">36</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Vervang de letters door hun waarde: 6 · 5 + 2 · 3 = 30 + 6 = 36.</div>
-  <div class="red" id="red-17"><b>💡 Redenering</b><ol><li>Zet 5 in de plaats van a en 3 in de plaats van b.</li><li>Je krijgt 6 · 5 + 2 · 3.</li><li>6 · 5 = 30 en 2 · 3 = 6.</li><li>30 + 6 = 36.</li></ol><span class="br">📖 Pienter 1, p. 25</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 25</div>
 </div><div class="q" data-i="18" data-u="h1" data-ut="P1-H1 Getallen" data-lv="3" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 19 van 54 · P1-H1 Getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 19 van 54 · P1-H1 Getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Twee diagrammen tonen dezelfde gegevens over het aantal inbraken in de stad: vorig jaar en dit jaar. In diagram 2 lijkt de stijging veel groter dan in diagram 1. Hoe komt dat?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q18" value="0"><span class="key">A</span><span class="txt">In diagram 2 begint de verticale as niet bij 0, waardoor een klein verschil groot lijkt</span></label><label class="opt"><input type="radio" name="q18" value="1"><span class="key">B</span><span class="txt">In diagram 2 zijn de aantallen in een andere eenheid weergegeven</span></label><label class="opt"><input type="radio" name="q18" value="2"><span class="key">C</span><span class="txt">In diagram 2 zijn de gegevens over een langere periode weergegeven</span></label><label class="opt"><input type="radio" name="q18" value="3"><span class="key">D</span><span class="txt">In diagram 2 is de volgorde van de twee jaren omgewisseld</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Kijk altijd naar de schaalverdeling van de assen. Als de verticale as niet bij 0 begint, lijken kleine verschillen heel groot.</div>
-  <div class="red" id="red-18"><b>💡 Redenering</b><ol><li>Je vergelijkt de twee diagrammen en ziet dat de staven in diagram 2 veel meer verschillen.</li><li>Je kijkt naar de getallen op de verticale as: in diagram 1 loopt die van 0 tot 250, in diagram 2 maar van 204 tot 216.</li><li>De as van diagram 2 begint niet bij 0, dus wordt een klein verschil uitvergroot.</li><li>De gegevens zijn gelijk; alleen de schaalverdeling verschilt.</li></ol><span class="br">📖 Pienter 1, p. 23</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 23</div>
 </div><h2 class="sec" id="sec-h2">3. P1-H2 Natuurlijke getallen <span style="font-weight:400;color:var(--muted);font-size:.85rem">(Blok A · week 4, 10 vragen)</span></h2>
 <p class="secsub">Kies per vraag één antwoord. 10 vragen.</p><div class="lees">📖 <b>Leerstof in Pienter 1:</b> Hoofdstuk 2, p. 29–76</div><div class="q" data-i="19" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="1" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 20 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 20 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Vul in met <, > of =.<br>504 ... 495</div>
   <div class="opts"><label class="opt"><input type="radio" name="q19" value="0"><span class="key">A</span><span class="txt">504 &lt; 495</span></label><label class="opt"><input type="radio" name="q19" value="1"><span class="key">B</span><span class="txt">504 ≤ 495</span></label><label class="opt"><input type="radio" name="q19" value="2"><span class="key">C</span><span class="txt">504 = 495</span></label><label class="opt"><input type="radio" name="q19" value="3"><span class="key">D</span><span class="txt">504 &gt; 495</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Op de getallenas worden de getallen van links naar rechts groter. 504 is groter dan 495, dus 504 &gt; 495.</div>
-  <div class="red" id="red-19"><b>💡 Redenering</b><ol><li>Vergelijk eerst de honderdtallen: 5 is groter dan 4.</li><li>Dus 504 is groter dan 495.</li><li>Het teken met de open kant staat naar het grootste getal: 504 &gt; 495.</li></ol><span class="br">📖 Pienter 1, p. 32</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 32</div>
 </div><div class="q" data-i="20" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="1" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 21 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 21 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">x is een even natuurlijk getal en 14 < x < 22. Welke getallen komen in aanmerking?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q20" value="0"><span class="key">A</span><span class="txt">14, 16, 18 en 20</span></label><label class="opt"><input type="radio" name="q20" value="1"><span class="key">B</span><span class="txt">16, 18 en 20</span></label><label class="opt"><input type="radio" name="q20" value="2"><span class="key">C</span><span class="txt">16, 18, 20 en 22</span></label><label class="opt"><input type="radio" name="q20" value="3"><span class="key">D</span><span class="txt">15, 17, 19 en 21</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>De even getallen zijn 0, 2, 4, 6, ... Je houdt de even getallen over die groter zijn dan 14 en kleiner dan 22: 16, 18 en 20.</div>
-  <div class="red" id="red-20"><b>💡 Redenering</b><ol><li>Schrijf de even getallen op: 0, 2, 4, ..., 16, 18, 20, 22.</li><li>14 en 22 horen er niet bij, want x is groter dan 14 en kleiner dan 22.</li><li>Je houdt 16, 18 en 20 over.</li></ol><span class="br">📖 Pienter 1, p. 60</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 60</div>
 </div><div class="q" data-i="21" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="1" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 22 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 22 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Welk van deze getallen is deelbaar door 4?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q21" value="0"><span class="key">A</span><span class="txt">1 230</span></label><label class="opt"><input type="radio" name="q21" value="1"><span class="key">B</span><span class="txt">1 238</span></label><label class="opt"><input type="radio" name="q21" value="2"><span class="key">C</span><span class="txt">1 234</span></label><label class="opt"><input type="radio" name="q21" value="3"><span class="key">D</span><span class="txt">1 236</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Een getal is deelbaar door 4 als het getal van de laatste twee cijfers deelbaar is door 4. Bij 1 236 is dat 36, en 36 : 4 = 9.</div>
-  <div class="red" id="red-21"><b>💡 Redenering</b><ol><li>Neem de laatste twee cijfers van elk getal: 30, 34, 36, 38.</li><li>Alleen 36 is deelbaar door 4 (36 : 4 = 9).</li><li>Dus alleen 1 236 is deelbaar door 4.</li></ol><span class="br">📖 Pienter 1, p. 56</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 56</div>
 </div><div class="q" data-i="22" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="2" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 23 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 23 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Hoeveel delers heeft 36?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q22" value="0"><span class="key">A</span><span class="txt">8 delers</span></label><label class="opt"><input type="radio" name="q22" value="1"><span class="key">B</span><span class="txt">10 delers</span></label><label class="opt"><input type="radio" name="q22" value="2"><span class="key">C</span><span class="txt">9 delers</span></label><label class="opt"><input type="radio" name="q22" value="3"><span class="key">D</span><span class="txt">6 delers</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>del 36 = {1, 2, 3, 4, 6, 9, 12, 18, 36}. Dat zijn 9 delers.</div>
-  <div class="red" id="red-22"><b>💡 Redenering</b><ol><li>Zoek de delers met een T-schema: 1 en 36, 2 en 18, 3 en 12, 4 en 9, 6 en 6.</li><li>Stop als het quotiënt kleiner is dan of gelijk is aan de deler.</li><li>del 36 = {1, 2, 3, 4, 6, 9, 12, 18, 36}, dus 9 delers.</li></ol><span class="br">📖 Pienter 1, p. 59</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 59</div>
 </div><div class="q" data-i="23" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="2" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 24 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 24 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Is 1 een priemgetal?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q23" value="0"><span class="key">A</span><span class="txt">Ja, want 1 heeft precies twee delers: 1 en 1.</span></label><label class="opt"><input type="radio" name="q23" value="1"><span class="key">B</span><span class="txt">Ja, want elk oneven getal is een priemgetal.</span></label><label class="opt"><input type="radio" name="q23" value="2"><span class="key">C</span><span class="txt">Nee, want 1 heeft maar één deler, namelijk 1.</span></label><label class="opt"><input type="radio" name="q23" value="3"><span class="key">D</span><span class="txt">Nee, want 1 is geen natuurlijk getal.</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Een priemgetal heeft precies twee verschillende delers: 1 en zichzelf. 1 heeft alleen zichzelf als deler en is dus geen priemgetal.</div>
-  <div class="red" id="red-23"><b>💡 Redenering</b><ol><li>Een priemgetal heeft precies twee verschillende delers.</li><li>Kijk naar de delers van 1: alleen het getal 1.</li><li>Eén deler is te weinig, dus 1 is geen priemgetal.</li></ol><span class="br">📖 Pienter 1, p. 75</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 75</div>
 </div><div class="q" data-i="24" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="2" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 25 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 25 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Bereken: <b>6 + 4 · 3²</b></div>
   <div class="opts"><label class="opt"><input type="radio" name="q24" value="0"><span class="key">A</span><span class="txt">18</span></label><label class="opt"><input type="radio" name="q24" value="1"><span class="key">B</span><span class="txt">54</span></label><label class="opt"><input type="radio" name="q24" value="2"><span class="key">C</span><span class="txt">90</span></label><label class="opt"><input type="radio" name="q24" value="3"><span class="key">D</span><span class="txt">42</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Eerst de macht (3² = 9), dan vermenigvuldigen (4 · 9 = 36) en ten slotte optellen: 6 + 36 = 42.</div>
-  <div class="red" id="red-24"><b>💡 Redenering</b><ol><li>Machten komen eerst: 3² = 9.</li><li>Dan vermenigvuldigen: 4 · 9 = 36.</li><li>Tot slot optellen: 6 + 36 = 42.</li></ol><span class="br">📖 Pienter 1, p. 50-51</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 50-51</div>
 </div><div class="q" data-i="25" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="2" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 26 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 26 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Axel bouwt een vierkant kamp met een oppervlakte van 64 m². Hoe lang is één zijde van het kamp?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q25" value="0"><span class="key">A</span><span class="txt">8 m</span></label><label class="opt"><input type="radio" name="q25" value="1"><span class="key">B</span><span class="txt">16 m</span></label><label class="opt"><input type="radio" name="q25" value="2"><span class="key">C</span><span class="txt">32 m</span></label><label class="opt"><input type="radio" name="q25" value="3"><span class="key">D</span><span class="txt">4 m</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>De zijde van een vierkant vind je met de vierkantswortel: √64 = 8, want 8² = 64.</div>
-  <div class="red" id="red-25"><b>💡 Redenering</b><ol><li>Zoek een getal waarvan het kwadraat 64 is.</li><li>8 · 8 = 64, dus √64 = 8.</li><li>Eén zijde van het kamp is dus 8 m.</li></ol><span class="br">📖 Pienter 1, p. 52</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 52</div>
 </div><div class="q" data-i="26" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="3" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 27 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 27 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Wat is de priemontbinding van 72?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q26" value="0"><span class="key">A</span><span class="txt">2³ · 3²</span></label><label class="opt"><input type="radio" name="q26" value="1"><span class="key">B</span><span class="txt">8 · 9</span></label><label class="opt"><input type="radio" name="q26" value="2"><span class="key">C</span><span class="txt">2² · 3³</span></label><label class="opt"><input type="radio" name="q26" value="3"><span class="key">D</span><span class="txt">2² · 3²</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Je deelt 72 steeds door priemgetallen: 72 = 2 · 2 · 2 · 3 · 3, en dat schrijf je als 2³ · 3².</div>
-  <div class="red" id="red-26"><b>💡 Redenering</b><ol><li>Deel 72 door 2: 36, dan 18, dan 9. Je hebt 2 · 2 · 2 · 9.</li><li>Deel 9 door 3: je krijgt 2 · 2 · 2 · 3 · 3.</li><li>In machten: 2³ · 3².</li></ol><span class="br">📖 Pienter 1, p. 70</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 70</div>
 </div><div class="q" data-i="27" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="3" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 28 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 28 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Je hebt 18 rode en 24 groene snoepjes. Je verdeelt ze in zo veel mogelijk zakjes zodat elk zakje evenveel rode snoepjes heeft en evenveel groene snoepjes. Hoeveel zakjes krijg je?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q27" value="0"><span class="key">A</span><span class="txt">72 zakjes, want kgv(18, 24) = 72</span></label><label class="opt"><input type="radio" name="q27" value="1"><span class="key">B</span><span class="txt">6 zakjes, want ggd(18, 24) = 6</span></label><label class="opt"><input type="radio" name="q27" value="2"><span class="key">C</span><span class="txt">3 zakjes, want ggd(18, 24) = 3</span></label><label class="opt"><input type="radio" name="q27" value="3"><span class="key">D</span><span class="txt">12 zakjes, want ggd(18, 24) = 12</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Het aantal zakjes moet een deler zijn van 18 én van 24. De grootste gemeenschappelijke deler is ggd(18, 24) = 6, dus je krijgt 6 zakjes.</div>
-  <div class="red" id="red-27"><b>💡 Redenering</b><ol><li>Noteer de delers: del 18 = {1, 2, 3, 6, 9, 18} en del 24 = {1, 2, 3, 4, 6, 8, 12, 24}.</li><li>De gemeenschappelijke delers zijn 1, 2, 3 en 6. De grootste is 6.</li><li>Dus ggd(18, 24) = 6: je maakt 6 zakjes met telkens 3 rode en 4 groene snoepjes.</li></ol><span class="br">📖 Pienter 1, p. 70</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 70</div>
 </div><div class="q" data-i="28" data-u="h2" data-ut="P1-H2 Natuurlijke getallen" data-lv="3" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 29 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 29 van 54 · P1-H2 Natuurlijke getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Twee bussen vertrekken samen om 8 uur uit hetzelfde station. Bus A rijdt elke 12 minuten, bus B elke 18 minuten. Na hoeveel minuten vertrekken ze opnieuw samen?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q28" value="0"><span class="key">A</span><span class="txt">Na 30 minuten, want kgv(12, 18) = 30</span></label><label class="opt"><input type="radio" name="q28" value="1"><span class="key">B</span><span class="txt">Na 36 minuten, want kgv(12, 18) = 36</span></label><label class="opt"><input type="radio" name="q28" value="2"><span class="key">C</span><span class="txt">Na 6 minuten, want kgv(12, 18) = 6</span></label><label class="opt"><input type="radio" name="q28" value="3"><span class="key">D</span><span class="txt">Na 216 minuten, want kgv(12, 18) = 216</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Het moment waarop beide bussen samen vertrekken is een veelvoud van 12 én van 18. Het kleinste gemeenschappelijke veelvoud is kgv(12, 18) = 36.</div>
-  <div class="red" id="red-28"><b>💡 Redenering</b><ol><li>Veelvouden van 12: 12, 24, 36, 48, ...</li><li>Veelvouden van 18: 18, 36, 54, ...</li><li>Het eerste veelvoud dat in beide rijen staat, is 36. Dus na 36 minuten.</li></ol><span class="br">📖 Pienter 1, p. 73</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 73</div>
 </div><h2 class="sec" id="sec-h4">4. P1-H4 Positieve rationale getallen (breuken) <span style="font-weight:400;color:var(--muted);font-size:.85rem">(Blok A · week 4–5, 9 vragen)</span></h2>
 <p class="secsub">Kies per vraag één antwoord. 9 vragen.</p><div class="lees">📖 <b>Leerstof in Pienter 1:</b> Hoofdstuk 4, p. 117–170</div><div class="q" data-i="29" data-u="h4" data-ut="P1-H4 Positieve rationale getallen (breuken)" data-lv="1" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 30 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 30 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">In de klas van Yanin zitten 24 leerlingen. 18 van hen komen met de fiets naar school. Welk deel van de leerlingen komt met de fiets? Geef je antwoord met een onvereenvoudigbare breuk.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q29" value="0"><span class="key">A</span><span class="txt">4/3</span></label><label class="opt"><input type="radio" name="q29" value="1"><span class="key">B</span><span class="txt">3/4</span></label><label class="opt"><input type="radio" name="q29" value="2"><span class="key">C</span><span class="txt">24/18</span></label><label class="opt"><input type="radio" name="q29" value="3"><span class="key">D</span><span class="txt">1/4</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>18 van de 24 leerlingen komen met de fiets, dus 18/24. Je deelt teller en noemer door hun ggd 6 en krijgt 3/4.</div>
-  <div class="red" id="red-29"><b>💡 Redenering</b><ol><li>Het deel is 18 en het geheel is 24, dus de breuk is 18/24.</li><li>Zoek de ggd van 18 en 24: dat is 6.</li><li>Deel beide door 6: 18 : 6 = 3 en 24 : 6 = 4.</li><li>Je krijgt 3/4. Dat is onvereenvoudigbaar.</li></ol><span class="br">📖 Pienter 1, p. 120-122</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 120-122</div>
 </div><div class="q" data-i="30" data-u="h4" data-ut="P1-H4 Positieve rationale getallen (breuken)" data-lv="1" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 31 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 31 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Vereenvoudig de breuk 42/72 tot een onvereenvoudigbare breuk.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q30" value="0"><span class="key">A</span><span class="txt">7/72</span></label><label class="opt"><input type="radio" name="q30" value="1"><span class="key">B</span><span class="txt">12/7</span></label><label class="opt"><input type="radio" name="q30" value="2"><span class="key">C</span><span class="txt">7/11</span></label><label class="opt"><input type="radio" name="q30" value="3"><span class="key">D</span><span class="txt">7/12</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>De ggd van 42 en 72 is 6. Deel de teller en de noemer door 6, dan krijg je 7/12.</div>
-  <div class="red" id="red-30"><b>💡 Redenering</b><ol><li>Zoek de ggd van 42 en 72: dat is 6.</li><li>Deel de teller door 6: 42 : 6 = 7.</li><li>Deel de noemer door 6: 72 : 6 = 12.</li><li>Je krijgt 7/12. Dat is onvereenvoudigbaar.</li></ol><span class="br">📖 Pienter 1, p. 120-122</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 120-122</div>
 </div><div class="q" data-i="31" data-u="h4" data-ut="P1-H4 Positieve rationale getallen (breuken)" data-lv="1" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 32 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 32 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Zet de breuk 12/20 om naar de decimale schrijfwijze (een kommagetal).</div>
   <div class="opts"><label class="opt"><input type="radio" name="q31" value="0"><span class="key">A</span><span class="txt">1,2</span></label><label class="opt"><input type="radio" name="q31" value="1"><span class="key">B</span><span class="txt">0,5</span></label><label class="opt"><input type="radio" name="q31" value="2"><span class="key">C</span><span class="txt">0,6</span></label><label class="opt"><input type="radio" name="q31" value="3"><span class="key">D</span><span class="txt">0,12</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Maak van de noemer 10: 12/20 = 6/10. Een tiende schrijf je met één cijfer na de komma, dus 0,6.</div>
-  <div class="red" id="red-31"><b>💡 Redenering</b><ol><li>Vereenvoudig: 12/20 = 6/10 (teller en noemer gedeeld door 2).</li><li>10 is een tiende, dus je krijgt één cijfer na de komma.</li><li>6/10 = 0,6.</li></ol><span class="br">📖 Pienter 1, p. 125-130</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 125-130</div>
 </div><div class="q" data-i="32" data-u="h4" data-ut="P1-H4 Positieve rationale getallen (breuken)" data-lv="2" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 33 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 33 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Schrijf het gemengde getal 5 3/4 als een onechte breuk.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q32" value="0"><span class="key">A</span><span class="txt">8/4</span></label><label class="opt"><input type="radio" name="q32" value="1"><span class="key">B</span><span class="txt">15/4</span></label><label class="opt"><input type="radio" name="q32" value="2"><span class="key">C</span><span class="txt">23/4</span></label><label class="opt"><input type="radio" name="q32" value="3"><span class="key">D</span><span class="txt">19/4</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>5 3/4 betekent 5 + 3/4. Je schrijft 5 als 20/4 en telt er 3/4 bij op: dat geeft 23/4.</div>
-  <div class="red" id="red-32"><b>💡 Redenering</b><ol><li>Schrijf het natuurlijke getal met dezelfde noemer: 5 = 20/4.</li><li>Tel er de breuk bij op: 20/4 + 3/4 = 23/4.</li><li>Kort: 5 · 4 + 3 = 23, de noemer 4 blijft staan.</li></ol><span class="br">📖 Pienter 1, p. 122</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 122</div>
 </div><div class="q" data-i="33" data-u="h4" data-ut="P1-H4 Positieve rationale getallen (breuken)" data-lv="2" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 34 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 34 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Mona en Karel eten samen één pizza. Mona eet 1/4 van de pizza op, Karel eet 2/5. Welk deel van de pizza hebben ze samen opgegeten?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q33" value="0"><span class="key">A</span><span class="txt">3/9</span></label><label class="opt"><input type="radio" name="q33" value="1"><span class="key">B</span><span class="txt">13/20</span></label><label class="opt"><input type="radio" name="q33" value="2"><span class="key">C</span><span class="txt">7/20</span></label><label class="opt"><input type="radio" name="q33" value="3"><span class="key">D</span><span class="txt">13/40</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Maak de breuken gelijknamig met noemer 20: 1/4 = 5/20 en 2/5 = 8/20. Samen is dat 13/20.</div>
-  <div class="red" id="red-33"><b>💡 Redenering</b><ol><li>Maak gelijknamig: 1/4 = 5/20 en 2/5 = 8/20.</li><li>Tel de tellers op: 5 + 8 = 13, de noemer blijft 20.</li><li>Je krijgt 13/20. Dat kan je niet meer vereenvoudigen.</li></ol><span class="br">📖 Pienter 1, p. 133</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 133</div>
 </div><div class="q" data-i="34" data-u="h4" data-ut="P1-H4 Positieve rationale getallen (breuken)" data-lv="2" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 35 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 35 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Welke van deze breuken is het grootst?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q34" value="0"><span class="key">A</span><span class="txt">7/12</span></label><label class="opt"><input type="radio" name="q34" value="1"><span class="key">B</span><span class="txt">3/5</span></label><label class="opt"><input type="radio" name="q34" value="2"><span class="key">C</span><span class="txt">5/8</span></label><label class="opt"><input type="radio" name="q34" value="3"><span class="key">D</span><span class="txt">2/3</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Zet ze om naar kommagetallen: 2/3 ≈ 0,667 · 5/8 = 0,625 · 3/5 = 0,6 · 7/12 ≈ 0,583. Dus 2/3 is het grootst.</div>
-  <div class="red" id="red-34"><b>💡 Redenering</b><ol><li>Maak ze vergelijkbaar: deel teller door noemer.</li><li>2/3 ≈ 0,667 · 5/8 = 0,625 · 3/5 = 0,6 · 7/12 ≈ 0,583.</li><li>Vergelijk de kommagetallen: 0,667 &gt; 0,625 &gt; 0,6 &gt; 0,583.</li><li>Dus 2/3 is het grootst.</li></ol><span class="br">📖 Pienter 1, p. 128-130</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 128-130</div>
 </div><div class="q" data-i="35" data-u="h4" data-ut="P1-H4 Positieve rationale getallen (breuken)" data-lv="3" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 36 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 36 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Yanin heeft 3/4 liter appelsap. Ze vult daarmee kleine flesjes van 1/8 liter. Hoeveel flesjes kan ze helemaal vullen?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q35" value="0"><span class="key">A</span><span class="txt">6</span></label><label class="opt"><input type="radio" name="q35" value="1"><span class="key">B</span><span class="txt">3/32</span></label><label class="opt"><input type="radio" name="q35" value="2"><span class="key">C</span><span class="txt">24</span></label><label class="opt"><input type="radio" name="q35" value="3"><span class="key">D</span><span class="txt">1/6</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Je moet delen: 3/4 : 1/8. Delen door een breuk is vermenigvuldigen met het omgekeerde: 3/4 · 8/1 = 24/4 = 6.</div>
-  <div class="red" id="red-35"><b>💡 Redenering</b><ol><li>Hoeveel keer 1/8 liter past in 3/4 liter? Dat is 3/4 : 1/8.</li><li>Vermenigvuldig met het omgekeerde van de tweede breuk: 3/4 · 8/1.</li><li>3 · 8 = 24 en 4 · 1 = 4, dus 24/4.</li><li>24 : 4 = 6. Ze kan 6 flesjes vullen.</li></ol><span class="br">📖 Pienter 1, p. 148</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 148</div>
 </div><div class="q" data-i="36" data-u="h4" data-ut="P1-H4 Positieve rationale getallen (breuken)" data-lv="3" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 37 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 37 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Schrijf 8/11 als een decimaal getal en rond af op twee cijfers na de komma.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q36" value="0"><span class="key">A</span><span class="txt">0,72</span></label><label class="opt"><input type="radio" name="q36" value="1"><span class="key">B</span><span class="txt">0,73</span></label><label class="opt"><input type="radio" name="q36" value="2"><span class="key">C</span><span class="txt">0,74</span></label><label class="opt"><input type="radio" name="q36" value="3"><span class="key">D</span><span class="txt">1,38</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Je deelt 8 door 11: dat is 0,727272... Het derde cijfer na de komma is 7, dus rond je af naar boven: 0,73.</div>
-  <div class="red" id="red-36"><b>💡 Redenering</b><ol><li>Deel de teller door de noemer: 8 : 11 = 0,727272...</li><li>Je moet op twee cijfers na de komma afronden, dus kijk je naar het derde cijfer: dat is 7.</li><li>7 is groter dan 5, dus rond je af naar boven: 0,73.</li></ol><span class="br">📖 Pienter 1, p. 130</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 130</div>
 </div><div class="q" data-i="37" data-u="h4" data-ut="P1-H4 Positieve rationale getallen (breuken)" data-lv="3" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 38 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 38 van 54 · P1-H4 Positieve rationale getallen (breuken)<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Bereken: 6 − 1/2 · 3/4 = ?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q37" value="0"><span class="key">A</span><span class="txt">6 3/8</span></label><label class="opt"><input type="radio" name="q37" value="1"><span class="key">B</span><span class="txt">4 1/8</span></label><label class="opt"><input type="radio" name="q37" value="2"><span class="key">C</span><span class="txt">5 5/8</span></label><label class="opt"><input type="radio" name="q37" value="3"><span class="key">D</span><span class="txt">5 1/4</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Eerst vermenigvuldigen: 1/2 · 3/4 = 3/8. Dan aftrekken: 6 − 3/8 = 48/8 − 3/8 = 45/8 = 5 5/8.</div>
-  <div class="red" id="red-37"><b>💡 Redenering</b><ol><li>Vermenigvuldigen komt vóór aftrekken: 1/2 · 3/4 = 3/8.</li><li>Schrijf 6 met noemer 8: 6 = 48/8.</li><li>Trek af: 48/8 − 3/8 = 45/8.</li><li>45/8 = 5 5/8.</li></ol><span class="br">📖 Pienter 1, p. 153</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 153</div>
 </div><h2 class="sec" id="sec-h8">5. P1-H8 Gehele getallen <span style="font-weight:400;color:var(--muted);font-size:.85rem">(Blok A · week 5, 8 vragen)</span></h2>
 <p class="secsub">Kies per vraag één antwoord. 8 vragen.</p><div class="lees">📖 <b>Leerstof in Pienter 1:</b> Hoofdstuk 8, p. 237–288</div><div class="q" data-i="38" data-u="h8" data-ut="P1-H8 Gehele getallen" data-lv="1" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 39 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 39 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Welk van deze gehele getallen is het grootst?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q38" value="0"><span class="key">A</span><span class="txt">−7</span></label><label class="opt"><input type="radio" name="q38" value="1"><span class="key">B</span><span class="txt">−20</span></label><label class="opt"><input type="radio" name="q38" value="2"><span class="key">C</span><span class="txt">−12</span></label><label class="opt"><input type="radio" name="q38" value="3"><span class="key">D</span><span class="txt">−3</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Op de getallenas geldt: hoe dichter bij 0, hoe groter het getal. Van deze negatieve getallen ligt −3 het dichtst bij 0, dus −3 is het grootst.</div>
-  <div class="red" id="red-38"><b>💡 Redenering</b><ol><li>Zet de getallen op de getallenas: ... −20, −12, −7, −3, 0.</li><li>Alle getallen zijn negatief, dus ze zijn allemaal kleiner dan 0.</li><li>Hoe dichter bij 0, hoe groter: −3 staat het meest rechts en is dus het grootst.</li></ol><span class="br">📖 Pienter 1, p. 241</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 241</div>
 </div><div class="q" data-i="39" data-u="h8" data-ut="P1-H8 Gehele getallen" data-lv="1" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 40 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 40 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Bereken: |−8| + |+3|</div>
   <div class="opts"><label class="opt"><input type="radio" name="q39" value="0"><span class="key">A</span><span class="txt">−11</span></label><label class="opt"><input type="radio" name="q39" value="1"><span class="key">B</span><span class="txt">11</span></label><label class="opt"><input type="radio" name="q39" value="2"><span class="key">C</span><span class="txt">5</span></label><label class="opt"><input type="radio" name="q39" value="3"><span class="key">D</span><span class="txt">−5</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>De absolute waarde is de afstand tot 0 en is nooit negatief: |−8| = 8 en |+3| = 3, dus 8 + 3 = 11.</div>
-  <div class="red" id="red-39"><b>💡 Redenering</b><ol><li>|−8| is de afstand van −8 tot 0 op de getallenas: dat is 8.</li><li>|+3| is de afstand van +3 tot 0: dat is 3.</li><li>Tel op: 8 + 3 = 11.</li></ol><span class="br">📖 Pienter 1, p. 240 en 242</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 240 en 242</div>
 </div><div class="q" data-i="40" data-u="h8" data-ut="P1-H8 Gehele getallen" data-lv="2" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 41 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 41 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Bereken: −(−9) + (+4)</div>
   <div class="opts"><label class="opt"><input type="radio" name="q40" value="0"><span class="key">A</span><span class="txt">−5</span></label><label class="opt"><input type="radio" name="q40" value="1"><span class="key">B</span><span class="txt">−13</span></label><label class="opt"><input type="radio" name="q40" value="2"><span class="key">C</span><span class="txt">+13</span></label><label class="opt"><input type="radio" name="q40" value="3"><span class="key">D</span><span class="txt">+5</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Het tegengestelde van −9 is +9. Daarna zijn beide getallen positief: 9 + 4 = 13, dus +13.</div>
-  <div class="red" id="red-40"><b>💡 Redenering</b><ol><li>−(−9) betekent: het tegengestelde van −9, en dat is +9.</li><li>De opgave wordt nu (+9) + (+4).</li><li>Zelfde teken: tel de absolute waarden op en behoud het teken: 9 + 4 = 13, dus +13.</li></ol><span class="br">📖 Pienter 1, p. 240 en 248</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 240 en 248</div>
 </div><div class="q" data-i="41" data-u="h8" data-ut="P1-H8 Gehele getallen" data-lv="2" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 42 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 42 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Bereken: (−7) · (−9)</div>
   <div class="opts"><label class="opt"><input type="radio" name="q41" value="0"><span class="key">A</span><span class="txt">−16</span></label><label class="opt"><input type="radio" name="q41" value="1"><span class="key">B</span><span class="txt">+16</span></label><label class="opt"><input type="radio" name="q41" value="2"><span class="key">C</span><span class="txt">−63</span></label><label class="opt"><input type="radio" name="q41" value="3"><span class="key">D</span><span class="txt">+63</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>De tekenregel zegt: min · min = plus. Reken de absolute waarden uit: 7 · 9 = 63, dus de uitkomst is +63.</div>
-  <div class="red" id="red-41"><b>💡 Redenering</b><ol><li>Tekenregel: min · min = plus, dus de uitkomst is positief.</li><li>Reken de absolute waarden uit: 7 · 9 = 63.</li><li>De uitkomst is dus +63.</li></ol><span class="br">📖 Pienter 1, p. 256-257</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 256-257</div>
 </div><div class="q" data-i="42" data-u="h8" data-ut="P1-H8 Gehele getallen" data-lv="2" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 43 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 43 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Bereken: (−120) : (−5)</div>
   <div class="opts"><label class="opt"><input type="radio" name="q42" value="0"><span class="key">A</span><span class="txt">+25</span></label><label class="opt"><input type="radio" name="q42" value="1"><span class="key">B</span><span class="txt">−24</span></label><label class="opt"><input type="radio" name="q42" value="2"><span class="key">C</span><span class="txt">+24</span></label><label class="opt"><input type="radio" name="q42" value="3"><span class="key">D</span><span class="txt">−25</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>De tekenregel zegt: min : min = plus. Reken de absolute waarden uit: 120 : 5 = 24, dus de uitkomst is +24.</div>
-  <div class="red" id="red-42"><b>💡 Redenering</b><ol><li>Tekenregel: min : min = plus, dus het quotiënt is positief.</li><li>Reken de absolute waarden uit: 120 : 5 = 24.</li><li>De uitkomst is dus +24.</li></ol><span class="br">📖 Pienter 1, p. 259-260</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 259-260</div>
 </div><div class="q" data-i="43" data-u="h8" data-ut="P1-H8 Gehele getallen" data-lv="3" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 44 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 44 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Bereken handig met de distributiviteit: −7 · 102</div>
   <div class="opts"><label class="opt"><input type="radio" name="q43" value="0"><span class="key">A</span><span class="txt">−714</span></label><label class="opt"><input type="radio" name="q43" value="1"><span class="key">B</span><span class="txt">+686</span></label><label class="opt"><input type="radio" name="q43" value="2"><span class="key">C</span><span class="txt">+714</span></label><label class="opt"><input type="radio" name="q43" value="3"><span class="key">D</span><span class="txt">−686</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Je verdeelt de factor: 102 = 100 + 2, dus −7 · 102 = −7 · 100 + (−7) · 2 = −700 + (−14) = −714.</div>
-  <div class="red" id="red-43"><b>💡 Redenering</b><ol><li>Schrijf 102 als een som: 102 = 100 + 2.</li><li>Verdelen: −7 · 100 = −700 en −7 · 2 = −14.</li><li>Tel op: (−700) + (−14) = −714 (zelfde teken, dus −700 − 14).</li></ol><span class="br">📖 Pienter 1, p. 272</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 272</div>
 </div><div class="q" data-i="44" data-u="h8" data-ut="P1-H8 Gehele getallen" data-lv="3" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 45 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 45 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Op de bankrekening van Peter staat 234 euro. Voor gas en elektriciteit moet hij 413 euro betalen. Wat is na die betaling het saldo op zijn rekening?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q44" value="0"><span class="key">A</span><span class="txt">−179 euro</span></label><label class="opt"><input type="radio" name="q44" value="1"><span class="key">B</span><span class="txt">+647 euro</span></label><label class="opt"><input type="radio" name="q44" value="2"><span class="key">C</span><span class="txt">+179 euro</span></label><label class="opt"><input type="radio" name="q44" value="3"><span class="key">D</span><span class="txt">−647 euro</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Het saldo wordt 234 − 413 = −179. Een negatief saldo betekent dat Peter 179 euro schulden heeft.</div>
-  <div class="red" id="red-44"><b>💡 Redenering</b><ol><li>Je vertrekt van 234 euro, dus van het gehele getal +234.</li><li>Hij betaalt 413 euro: bereken (+234) − (+413) = 234 − 413.</li><li>413 is groter dan 234, dus de uitkomst is negatief: 234 − 413 = −179. Het saldo is −179 euro.</li></ol><span class="br">📖 Pienter 1, p. 253</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 253</div>
 </div><div class="q" data-i="45" data-u="h8" data-ut="P1-H8 Gehele getallen" data-lv="3" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 46 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 46 van 54 · P1-H8 Gehele getallen<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Welke gelijkheid is een voorbeeld van de <b>distributieve</b> eigenschap?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q45" value="0"><span class="key">A</span><span class="txt">−3 + (2 + 5) = (−3 + 2) + 5</span></label><label class="opt"><input type="radio" name="q45" value="1"><span class="key">B</span><span class="txt">−2 + 3 = 3 + (−2)</span></label><label class="opt"><input type="radio" name="q45" value="2"><span class="key">C</span><span class="txt">−2 · (5 + 8) = −2 · 5 + (−2) · 8</span></label><label class="opt"><input type="radio" name="q45" value="3"><span class="key">D</span><span class="txt">8 · (−7) = −7 · 8</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Bij verdelen (distributief) vermenigvuldig je de factor met elke term tussen de haakjes: a · (b + c) = a · b + a · c. De andere gelijkheden zijn voorbeelden van wisselen of schakelen.</div>
-  <div class="red" id="red-45"><b>💡 Redenering</b><ol><li>Verdelen betekent: a · (b + c) = a · b + a · c.</li><li>Kijk welke gelijkheid een factor met elke term tussen de haakjes vermenigvuldigt: dat is −2 · (5 + 8) = −2 · 5 + (−2) · 8.</li><li>De andere gelijkheden wisselen van plaats (commutatief) of verplaatsen haakjes (associatief).</li></ol><span class="br">📖 Pienter 1, p. 272-274</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 272-274</div>
 </div><h2 class="sec" id="sec-h10">6. P1-H10 Rationale getallen (+ procenten) <span style="font-weight:400;color:var(--muted);font-size:.85rem">(Blok A · week 6, 8 vragen)</span></h2>
 <p class="secsub">Kies per vraag één antwoord. 8 vragen.</p><div class="lees">📖 <b>Leerstof in Pienter 1:</b> Hoofdstuk 10, p. 315–380</div><div class="q" data-i="46" data-u="h10" data-ut="P1-H10 Rationale getallen (+ procenten)" data-lv="1" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 47 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 47 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Hoeveel is 15 % van 240?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q46" value="0"><span class="key">A</span><span class="txt">60</span></label><label class="opt"><input type="radio" name="q46" value="1"><span class="key">B</span><span class="txt">36</span></label><label class="opt"><input type="radio" name="q46" value="2"><span class="key">C</span><span class="txt">16</span></label><label class="opt"><input type="radio" name="q46" value="3"><span class="key">D</span><span class="txt">24</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>p % van een getal bereken je met p/100 · getal. Dus 15 % van 240 = 15/100 · 240 = 36.</div>
-  <div class="red" id="red-46"><b>💡 Redenering</b><ol><li>Schrijf het percentage als een breuk met noemer 100: 15 % = 15/100.</li><li>Vermenigvuldig die breuk met het getal: 15/100 · 240.</li><li>240 : 100 = 2,4 en 2,4 · 15 = 36.</li></ol><span class="br">📖 Pienter 1, p. 368-371</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 368-371</div>
 </div><div class="q" data-i="47" data-u="h10" data-ut="P1-H10 Rationale getallen (+ procenten)" data-lv="1" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 48 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv1">warm-up</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 48 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv1">warm-up</span></div></div>
   <div class="qtext">Schrijf −25 % als een onvereenvoudigbare breuk.</div>
   <div class="opts"><label class="opt"><input type="radio" name="q47" value="0"><span class="key">A</span><span class="txt">−1/25</span></label><label class="opt"><input type="radio" name="q47" value="1"><span class="key">B</span><span class="txt">−25/100</span></label><label class="opt"><input type="radio" name="q47" value="2"><span class="key">C</span><span class="txt">−1/4</span></label><label class="opt"><input type="radio" name="q47" value="3"><span class="key">D</span><span class="txt">1/4</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Procenten zijn breuken met 100 als noemer: −25 % = −25/100. Vereenvoudig door teller en noemer door 25 te delen: −25/100 = −1/4.</div>
-  <div class="red" id="red-47"><b>💡 Redenering</b><ol><li>Laat het procentteken weg en zet 100 in de noemer: −25/100.</li><li>Deel teller en noemer door 25: −(25 : 25) en (100 : 25).</li><li>Je krijgt −1/4. Dat is onvereenvoudigbaar.</li></ol><span class="br">📖 Pienter 1, p. 323-324</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 323-324</div>
 </div><div class="q" data-i="48" data-u="h10" data-ut="P1-H10 Rationale getallen (+ procenten)" data-lv="2" data-ans="1">
-  <div class="qtop"><div class="qnum">VRAAG 49 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 49 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Bereken: −7/8 + 3/4 = ?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q48" value="0"><span class="key">A</span><span class="txt">−5/6</span></label><label class="opt"><input type="radio" name="q48" value="1"><span class="key">B</span><span class="txt">−1/8</span></label><label class="opt"><input type="radio" name="q48" value="2"><span class="key">C</span><span class="txt">1/8</span></label><label class="opt"><input type="radio" name="q48" value="3"><span class="key">D</span><span class="txt">−1/2</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Maak de breuken eerst gelijknamig: 3/4 = 6/8. Dan is −7/8 + 6/8 = −1/8.</div>
-  <div class="red" id="red-48"><b>💡 Redenering</b><ol><li>Maak gelijknamig: 3/4 = 6/8, dus −7/8 + 6/8.</li><li>Tel de tellers op en behoud de noemer: (−7 + 6)/8.</li><li>Je krijgt −1/8.</li></ol><span class="br">📖 Pienter 1, p. 336-338</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 336-338</div>
 </div><div class="q" data-i="49" data-u="h10" data-ut="P1-H10 Rationale getallen (+ procenten)" data-lv="2" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 50 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 50 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Een paar schoenen kost € 80. Je krijgt 25 % korting. Hoeveel moet je betalen?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q49" value="0"><span class="key">A</span><span class="txt">€ 60</span></label><label class="opt"><input type="radio" name="q49" value="1"><span class="key">B</span><span class="txt">€ 55</span></label><label class="opt"><input type="radio" name="q49" value="2"><span class="key">C</span><span class="txt">€ 100</span></label><label class="opt"><input type="radio" name="q49" value="3"><span class="key">D</span><span class="txt">€ 20</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>25 % van € 80 = 0,25 · 80 = € 20 korting. Je betaalt dus € 80 − € 20 = € 60.</div>
-  <div class="red" id="red-49"><b>💡 Redenering</b><ol><li>Bereken de korting: 25 % van 80 = 25/100 · 80 = 20.</li><li>Trek de korting van de prijs af: 80 − 20.</li><li>Je betaalt € 60.</li></ol><span class="br">📖 Pienter 1, p. 368-371</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 368-371</div>
 </div><div class="q" data-i="50" data-u="h10" data-ut="P1-H10 Rationale getallen (+ procenten)" data-lv="2" data-ans="2">
-  <div class="qtop"><div class="qnum">VRAAG 51 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv2">midden</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 51 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv2">midden</span></div></div>
   <div class="qtext">Bereken: 1/2 − (−1/4) · 8 = ?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q50" value="0"><span class="key">A</span><span class="txt">6</span></label><label class="opt"><input type="radio" name="q50" value="1"><span class="key">B</span><span class="txt">2</span></label><label class="opt"><input type="radio" name="q50" value="2"><span class="key">C</span><span class="txt">2 1/2</span></label><label class="opt"><input type="radio" name="q50" value="3"><span class="key">D</span><span class="txt">−1 1/2</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Eerst vermenigvuldigen: (−1/4) · 8 = −2. Dan 1/2 − (−2) = 1/2 + 2 = 2 1/2.</div>
-  <div class="red" id="red-50"><b>💡 Redenering</b><ol><li>Volgorde: eerst vermenigvuldigen, dan optellen/aftrekken.</li><li>(−1/4) · 8 = −2.</li><li>1/2 − (−2) = 1/2 + 2 (aftrekken van een negatief getal = optellen).</li><li>1/2 + 2 = 2 1/2.</li></ol><span class="br">📖 Pienter 1, p. 363-365</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 363-365</div>
 </div><div class="q" data-i="51" data-u="h10" data-ut="P1-H10 Rationale getallen (+ procenten)" data-lv="3" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 52 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 52 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Bereken: −2/3 + 3/4 · 8/9 = ?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q51" value="0"><span class="key">A</span><span class="txt">2/27</span></label><label class="opt"><input type="radio" name="q51" value="1"><span class="key">B</span><span class="txt">1/12</span></label><label class="opt"><input type="radio" name="q51" value="2"><span class="key">C</span><span class="txt">−4/3</span></label><label class="opt"><input type="radio" name="q51" value="3"><span class="key">D</span><span class="txt">0</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Volgens de volgorde van de bewerkingen reken je eerst de vermenigvuldiging uit: 3/4 · 8/9 = 2/3. Dan is −2/3 + 2/3 = 0.</div>
-  <div class="red" id="red-51"><b>💡 Redenering</b><ol><li>Eerst vermenigvuldigen: 3/4 · 8/9 = 24/36 = 2/3.</li><li>Dan optellen: −2/3 + 2/3.</li><li>Een getal plus zijn tegengestelde is altijd 0.</li></ol><span class="br">📖 Pienter 1, p. 363-365</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 363-365</div>
 </div><div class="q" data-i="52" data-u="h10" data-ut="P1-H10 Rationale getallen (+ procenten)" data-lv="3" data-ans="3">
-  <div class="qtop"><div class="qnum">VRAAG 53 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 53 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Een fototoestel kostte € 250. In de solden kost het nu € 200. Hoeveel procent korting is dat?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q52" value="0"><span class="key">A</span><span class="txt">80 %</span></label><label class="opt"><input type="radio" name="q52" value="1"><span class="key">B</span><span class="txt">50 %</span></label><label class="opt"><input type="radio" name="q52" value="2"><span class="key">C</span><span class="txt">25 %</span></label><label class="opt"><input type="radio" name="q52" value="3"><span class="key">D</span><span class="txt">20 %</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>De korting is € 250 − € 200 = € 50. Het percentage vind je met deel : beginwaarde = 50 : 250 = 0,2 = 20 %.</div>
-  <div class="red" id="red-52"><b>💡 Redenering</b><ol><li>Bereken de korting in euro: € 250 − € 200 = € 50.</li><li>Deel de korting door de oorspronkelijke prijs: 50 : 250 = 0,2.</li><li>Zet het kommagetal om naar procent: 0,2 = 20 %.</li></ol><span class="br">📖 Pienter 1, p. 369, 372</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 369, 372</div>
 </div><div class="q" data-i="53" data-u="h10" data-ut="P1-H10 Rationale getallen (+ procenten)" data-lv="3" data-ans="0">
-  <div class="qtop"><div class="qnum">VRAAG 54 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv3">uitdagend</span></div>
-  <button class="btn-red">💡 Redenering</button></div>
+  <div class="qtop"><div class="qnum">VRAAG 54 van 54 · P1-H10 Rationale getallen (+ procenten)<span class="lvtxt lv3">uitdagend</span></div></div>
   <div class="qtext">Een jas kost na een korting van 30 % nog € 84. Wat was de oorspronkelijke prijs?</div>
   <div class="opts"><label class="opt"><input type="radio" name="q53" value="0"><span class="key">A</span><span class="txt">€ 120</span></label><label class="opt"><input type="radio" name="q53" value="1"><span class="key">B</span><span class="txt">€ 280</span></label><label class="opt"><input type="radio" name="q53" value="2"><span class="key">C</span><span class="txt">€ 109,20</span></label><label class="opt"><input type="radio" name="q53" value="3"><span class="key">D</span><span class="txt">€ 25,20</span></label></div>
   <div class="verdict"></div>
   <div class="exp"><b>Uitleg: </b>Je betaalt nog 100 % − 30 % = 70 % van de prijs. De beginwaarde is deel : percentage = 84 : 0,70 = 120.</div>
-  <div class="red" id="red-53"><b>💡 Redenering</b><ol><li>Je betaalt nog 70 % van de prijs, dus € 84 komt overeen met 70 %.</li><li>Bereken eerst 1 %: 84 : 70 = 1,20.</li><li>Vermenigvuldig met 100: 1,20 · 100 = € 120.</li></ol><span class="br">📖 Pienter 1, p. 369, 373</span></div>
   <div class="exp bron" style="display:none"><b>📖 Waar staat dit? </b>Pienter 1, p. 369, 373</div>
 </div></div>
 <div id="summary">
@@ -633,13 +520,6 @@ document.querySelectorAll('.q').forEach(function(box){
       updateProgress();
     });
   });
-  const b=box.querySelector('.btn-red');
-  if(b){b.addEventListener('click',function(){
-    const red=document.getElementById('red-'+i);
-    red.classList.toggle('open');
-    b.classList.toggle('on');
-    b.textContent=red.classList.contains('open')?"💡 Verberg redenering":"💡 Redenering";
-  });}
 });
 function updateProgress(){
   let d=0;
@@ -650,17 +530,6 @@ function updateProgress(){
   document.getElementById('fill').style.width=(d/N*100)+"%";
   document.getElementById('progLbl').textContent=d+" van "+N;
 }
-document.getElementById('btnAll').addEventListener('click',function(){
-  const btn=this;
-  const anyClosed=Array.prototype.slice.call(document.querySelectorAll('.red')).some(function(r){return !r.classList.contains('open');});
-  document.querySelectorAll('.red').forEach(function(r){r.classList.toggle('open',anyClosed);});
-  document.querySelectorAll('.btn-red').forEach(function(b){
-    if(b.id==='btnAll')return;
-    b.classList.toggle('on',anyClosed);
-    b.textContent=anyClosed?"💡 Verberg redenering":"💡 Redenering";
-  });
-  btn.textContent=anyClosed?"💡 Verberg alle":"💡 Alle redeneringen";
-});
 document.getElementById('btnCheck').addEventListener('click',function(){
   let score=0;const per={};
   document.querySelectorAll('.q').forEach(function(box){
