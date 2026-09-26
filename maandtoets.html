@@ -614,7 +614,7 @@ footer{margin-top:26px;color:var(--muted);font-size:.82rem}
       <button id="btnCopy">📋 Kopieer resultaat</button>
       <button id="btnSave">💾 Bewaar als bestand</button>
     </div>
-    <div style="font-size:.8rem;color:var(--muted);margin-top:8px">De mail bevat je score, het cijfer per onderwerp en bij elke fout de vraag, jouw antwoord, het juiste antwoord, de uitleg en de boekpagina — zodat er meteen verbeterd kan worden.</div>
+    <div style="font-size:.8rem;color:var(--muted);margin-top:8px">De mail vertrekt <b>automatisch zodra alle 54 vragen ingevuld zijn</b> — je hoeft niets extra te doen. Hij bevat je score, het cijfer per onderwerp en bij elke fout de vraag, jouw antwoord, het juiste antwoord, de uitleg en de boekpagina. Half ingevuld? Dan gaat er nog niets weg.</div>
   </div>
 </div>
 <footer>Maandtoets Blok A · Pienter 1 (Van In) · gemaakt voor Yanin — Examencommissie 1e graad A-stroom, Basisvorming A.
@@ -711,6 +711,7 @@ document.getElementById('btnReset').addEventListener('click',function(){location
 const FORM_ENDPOINT="https://formspree.io/f/mljdprqe";
 const MAIL_TO="kmalaise@me.com";
 const MAIL_NAAM="papa";
+const POGING_KEY="maandtoets1_blokA_pogingen";
 const NL=String.fromCharCode(10), TAB=String.fromCharCode(9);   // geen backslashes in dit template
 const START=Date.now();
 let RAPPORT=null, verstuurd=false;
@@ -719,8 +720,14 @@ function nuTijd(){const d=new Date();return d.getFullYear()+"-"+twee(d.getMonth(
 function zetStatus(t,c){const s=document.getElementById('sendStatus');s.textContent=t;s.className='status '+(c||'');}
 function plat(s){return s.split(NL).join(" ").split(TAB).join(" ").replace(/  +/g," ").trim();}
 function kaal(s,prefix){return s.indexOf(prefix)===0?s.slice(prefix.length).trim():s.trim();}
+// pogingnummer onthouden (werkt ook na Opnieuw); faalt stil als de browser geen opslag toelaat
+function leesPoging(){try{return parseInt(localStorage.getItem(POGING_KEY)||"0",10)||0;}catch(e){return 0;}}
+function schrijfPoging(n){try{localStorage.setItem(POGING_KEY,String(n));}catch(e){}}
+function openVragen(){const open=[];document.querySelectorAll('.q').forEach(function(box){
+  if(!box.querySelector('input:checked'))open.push(parseInt(box.dataset.i,10)+1);});return open;}
 function rapport(){
-  const per={},foutDetail=[],alle=[];let score=0,n=0;
+  const per={},kort={},foutDetail=[],alle=[];let score=0,n=0;
+  document.querySelectorAll('nav.chips a').forEach(function(a){kort[a.dataset.u]=a.dataset.label||a.dataset.u;});
   document.querySelectorAll('.q').forEach(function(box){
     n++;
     const nr=parseInt(box.dataset.i,10)+1, right=parseInt(box.dataset.ans,10);
@@ -731,7 +738,7 @@ function rapport(){
     const qtext=plat(box.querySelector('.qtext').innerText);
     const juist=plat(opties[right].innerText), juistLetter="ABCD"[right];
     const gekozen=chosen===null?null:"ABCD"[chosen], goed=chosen===right;
-    per[u]=per[u]||{good:0,n:0,ut:ut};per[u].n++;if(goed){per[u].good++;score++;}
+    per[u]=per[u]||{good:0,n:0,ut:ut,label:kort[u]||ut};per[u].n++;if(goed){per[u].good++;score++;}
     alle.push(nr+":"+(gekozen===null?"–":gekozen)+(goed?"✓":"✗"));
     if(!goed){
       foutDetail.push(nr+". "+qtext
@@ -744,6 +751,8 @@ function rapport(){
   const duur=Math.max(1,Math.round((Date.now()-START)/60000));
   const pct=Math.round(score/n*100);
   const perRegels=Object.keys(per).map(function(u){const o=per[u];return "- "+o.ut+": "+o.good+"/"+o.n+" ("+Math.round(o.good/o.n*100)+"%)";});
+  const zwak=Object.keys(per).filter(function(u){return per[u].good/per[u].n<0.8;})
+             .map(function(u){return per[u].label+" ("+Math.round(per[u].good/per[u].n*100)+"%)";});
   const kop=["MAANDTOETS 1 — BLOK A (getallenwereld)",
              "Wiskunde · Pienter 1 (Van In) · Examencommissie 1e graad A-stroom",
              "Leerling: Yanin",
@@ -753,31 +762,42 @@ function rapport(){
              "Per onderwerp:"].concat(perRegels);
   const eind=["", (foutDetail.length? "Fout of niet ingevuld ("+foutDetail.length+"):" : "Alles juist! 🎉"),
               foutDetail.join(NL+NL), "", "Alle antwoorden: "+alle.join(" · ")];
-  return {tekst:kop.concat(eind).join(NL),score:score,n:n,pct:pct,duur:duur,
+  return {tekst:kop.concat(eind).join(NL),score:score,n:n,pct:pct,duur:duur,zwak:zwak,
           per:perRegels.join(" · "),fouten:foutDetail.length};
+}
+function kopRegel(pte){
+  return (pte>0? "poging "+pte+" — " : "")+"Yanin: "+RAPPORT.score+"/"+RAPPORT.n+" ("+RAPPORT.pct+"%)"
+    +(RAPPORT.zwak.length? " — zwak: "+RAPPORT.zwak.join(", ") : " — alles onder de knie");
 }
 function bereidVoor(){
   RAPPORT=rapport();
   const body=RAPPORT.tekst.length>1900?RAPPORT.tekst.slice(0,1900)+NL+"… (afgekapt — gebruik 💾 Bewaar voor de volledige versie)":RAPPORT.tekst;
   document.getElementById('btnMail').href="mailto:"+MAIL_TO
-    +"?subject="+encodeURIComponent("Maandtoets 1 Blok A — Yanin: "+RAPPORT.score+"/"+RAPPORT.n+" ("+RAPPORT.pct+"%)")
+    +"?subject="+encodeURIComponent("Maandtoets 1 Blok A — "+kopRegel(leesPoging()+1))
     +"&body="+encodeURIComponent(body);
   return RAPPORT;
 }
 function verstuur(){
   bereidVoor();
+  const open=openVragen();
+  if(open.length){
+    const toon=open.slice(0,12).join(", ")+(open.length>12?" …":"");
+    zetStatus("Nog "+open.length+(open.length===1?" vraag":" vragen")+" niet ingevuld ("+toon+") — er is nog niets verstuurd.", "warn");
+    return;
+  }
   if(!FORM_ENDPOINT){zetStatus("Automatisch versturen is nog niet ingesteld — gebruik de knoppen hieronder.","warn");return;}
   if(verstuurd)return;
+  const pte=leesPoging()+1;
   zetStatus("Bezig met versturen…","");
-  const payload={_subject:"Maandtoets 1 Blok A — Yanin: "+RAPPORT.score+"/"+RAPPORT.n+" ("+RAPPORT.pct+"%)",
+  const payload={_subject:"Maandtoets 1 Blok A — "+kopRegel(pte),
     _gotcha:"", leerling:"Yanin", toets:"Maandtoets 1 — Blok A (getallenwereld), Pienter 1",
-    datum:nuTijd(), duur_minuten:RAPPORT.duur, score:RAPPORT.score+"/"+RAPPORT.n,
-    percentage:RAPPORT.pct+"%", per_onderwerp:RAPPORT.per, aantal_fouten:RAPPORT.fouten,
-    rapport:RAPPORT.tekst};
+    poging:pte, datum:nuTijd(), duur_minuten:RAPPORT.duur, score:RAPPORT.score+"/"+RAPPORT.n,
+    percentage:RAPPORT.pct+"%", per_onderwerp:RAPPORT.per, zwakke_onderwerpen:RAPPORT.zwak.join(", "),
+    aantal_fouten:RAPPORT.fouten, rapport:RAPPORT.tekst};
   fetch(FORM_ENDPOINT,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(payload)})
    .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {ok:r.ok,status:r.status,err:(j&&(j.error||(j.errors&&j.errors[0]&&j.errors[0].message)))||""};});})
    .then(function(res){
-     if(res.ok){verstuurd=true;zetStatus("✓ Resultaat verstuurd naar "+MAIL_NAAM+" ("+MAIL_TO+").","ok");}
+     if(res.ok){verstuurd=true;schrijfPoging(pte);zetStatus("✓ Resultaat verstuurd (poging "+pte+") naar "+MAIL_NAAM+" ("+MAIL_TO+").","ok");}
      else{zetStatus("⚠ Versturen lukte niet (fout "+res.status+(res.err?": "+res.err:"")+"). Gebruik ✉️ Mail of 💾 Bewaar hieronder.","err");}
    })
    .catch(function(){zetStatus("⚠ Geen internet of geen verbinding — niet automatisch verstuurd. Gebruik ✉️ Mail of 💾 Bewaar hieronder.","warn");});
